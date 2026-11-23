@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem PPDB SIT Al Madani</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        // Ikon Feather inline (hanya 21 ikon yang dipakai) - menggantikan library feather-icons penuh.
+        // API tetap sama: feather.replace() mengubah <i data-feather="nama"> menjadi <svg>.
+        (function () {
+            var PATHS = {"send":"<line x1=\"22\" y1=\"2\" x2=\"11\" y2=\"13\"></line><polygon points=\"22 2 15 22 11 13 2 9 22 2\"></polygon>","settings":"<circle cx=\"12\" cy=\"12\" r=\"3\"></circle><path d=\"M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z\"></path>","map-pin":"<path d=\"M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z\"></path><circle cx=\"12\" cy=\"10\" r=\"3\"></circle>","users":"<path d=\"M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\"></path><circle cx=\"9\" cy=\"7\" r=\"4\"></circle><path d=\"M23 21v-2a4 4 0 0 0-3-3.87\"></path><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"></path>","user-check":"<path d=\"M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\"></path><circle cx=\"8.5\" cy=\"7\" r=\"4\"></circle><polyline points=\"17 11 19 13 23 9\"></polyline>","smile":"<circle cx=\"12\" cy=\"12\" r=\"10\"></circle><path d=\"M8 14s1.5 2 4 2 4-2 4-2\"></path><line x1=\"9\" y1=\"9\" x2=\"9.01\" y2=\"9\"></line><line x1=\"15\" y1=\"9\" x2=\"15.01\" y2=\"9\"></line>","printer":"<polyline points=\"6 9 6 2 18 2 18 9\"></polyline><path d=\"M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2\"></path><rect x=\"6\" y=\"14\" width=\"12\" height=\"8\"></rect>","phone":"<path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\"></path>","monitor":"<rect x=\"2\" y=\"3\" width=\"20\" height=\"14\" rx=\"2\" ry=\"2\"></rect><line x1=\"8\" y1=\"21\" x2=\"16\" y2=\"21\"></line><line x1=\"12\" y1=\"17\" x2=\"12\" y2=\"21\"></line>","mail":"<path d=\"M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z\"></path><polyline points=\"22,6 12,13 2,6\"></polyline>","log-out":"<path d=\"M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4\"></path><polyline points=\"16 17 21 12 16 7\"></polyline><line x1=\"21\" y1=\"12\" x2=\"9\" y2=\"12\"></line>","lock":"<rect x=\"3\" y=\"11\" width=\"18\" height=\"11\" rx=\"2\" ry=\"2\"></rect><path d=\"M7 11V7a5 5 0 0 1 10 0v4\"></path>","loader":"<line x1=\"12\" y1=\"2\" x2=\"12\" y2=\"6\"></line><line x1=\"12\" y1=\"18\" x2=\"12\" y2=\"22\"></line><line x1=\"4.93\" y1=\"4.93\" x2=\"7.76\" y2=\"7.76\"></line><line x1=\"16.24\" y1=\"16.24\" x2=\"19.07\" y2=\"19.07\"></line><line x1=\"2\" y1=\"12\" x2=\"6\" y2=\"12\"></line><line x1=\"18\" y1=\"12\" x2=\"22\" y2=\"12\"></line><line x1=\"4.93\" y1=\"19.07\" x2=\"7.76\" y2=\"16.24\"></line><line x1=\"16.24\" y1=\"7.76\" x2=\"19.07\" y2=\"4.93\"></line>","image":"<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect><circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\"></circle><polyline points=\"21 15 16 10 5 21\"></polyline>","home":"<path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"></path><polyline points=\"9 22 9 12 15 12 15 22\"></polyline>","grid":"<rect x=\"3\" y=\"3\" width=\"7\" height=\"7\"></rect><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\"></rect><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\"></rect><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\"></rect>","eye":"<path d=\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\"></path><circle cx=\"12\" cy=\"12\" r=\"3\"></circle>","check-square":"<polyline points=\"9 11 12 14 22 4\"></polyline><path d=\"M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11\"></path>","book-open":"<path d=\"M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z\"></path><path d=\"M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z\"></path>","award":"<circle cx=\"12\" cy=\"8\" r=\"7\"></circle><polyline points=\"8.21 13.89 7 23 12 20 17 23 15.79 13.88\"></polyline>","arrow-left":"<line x1=\"19\" y1=\"12\" x2=\"5\" y2=\"12\"></line><polyline points=\"12 19 5 12 12 5\"></polyline>","edit-2":"<path d=\"M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z\"></path>","search":"<circle cx=\"11\" cy=\"11\" r=\"8\"></circle><line x1=\"21\" y1=\"21\" x2=\"16.65\" y2=\"16.65\"></line>","trash-2":"<polyline points=\"3 6 5 6 21 6\"></polyline><path d=\"M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2\"></path><line x1=\"10\" y1=\"11\" x2=\"10\" y2=\"17\"></line><line x1=\"14\" y1=\"11\" x2=\"14\" y2=\"17\"></line>","database":"<ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"></ellipse><path d=\"M21 12c0 1.66-4 3-9 3s-9-1.34-9-3\"></path><path d=\"M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5\"></path>","filter":"<polygon points=\"22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3\"></polygon>","rotate-ccw":"<polyline points=\"1 4 1 10 7 10\"></polyline><path d=\"M3.51 15a9 9 0 1 0 2.13-9.36L1 10\"></path>","refresh-cw":"<polyline points=\"23 4 23 10 17 10\"></polyline><polyline points=\"1 20 1 14 7 14\"></polyline><path d=\"M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15\"></path>","align-justify":"<line x1=\"21\" y1=\"10\" x2=\"3\" y2=\"10\"></line><line x1=\"21\" y1=\"6\" x2=\"3\" y2=\"6\"></line><line x1=\"21\" y1=\"14\" x2=\"3\" y2=\"14\"></line><line x1=\"21\" y1=\"18\" x2=\"3\" y2=\"18\"></line>","chevrons-left":"<polyline points=\"11 17 6 12 11 7\"></polyline><polyline points=\"18 17 13 12 18 7\"></polyline>","message-circle":"<path d=\"M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z\"></path>","check-circle":"<path d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\"></path><polyline points=\"22 4 12 14.01 9 11.01\"></polyline>"};
+            window.feather = { replace: function () {
+                var els = document.querySelectorAll('[data-feather]');
+                for (var i = 0; i < els.length; i++) {
+                    var el = els[i], name = el.getAttribute('data-feather');
+                    if (!PATHS[name]) continue;
+                    var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                    for (var j = 0; j < el.attributes.length; j++) {
+                        var a = el.attributes[j];
+                        if (a.name !== 'data-feather' && a.name !== 'class') svg.setAttribute(a.name, a.value);
+                    }
+                    svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+                    svg.setAttribute('width', '24'); svg.setAttribute('height', '24');
+                    svg.setAttribute('viewBox', '0 0 24 24'); svg.setAttribute('fill', 'none');
+                    svg.setAttribute('stroke', 'currentColor'); svg.setAttribute('stroke-width', '2');
+                    svg.setAttribute('stroke-linecap', 'round'); svg.setAttribute('stroke-linejoin', 'round');
+                    svg.setAttribute('class', 'feather feather-' + name + (el.getAttribute('class') ? ' ' + el.getAttribute('class') : ''));
+                    svg.innerHTML = PATHS[name];
+                    el.parentNode.replaceChild(svg, el);
+                }
+            } };
+        })();
+    </script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'] },
+                    colors: { primary: '#6366F1', primaryDark: '#4F46E5', surface: '#F8FAFC' }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* ===== Variabel tema ===== */
+        :root { --primary: #6366F1; --primary-dark: #4F46E5; --ink: #0F172A; --line: #E2E8F0; --bg: #F5F3FF; }
+
+        /* ===== Dasar ===== */
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; }
+        :focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+        button { transition: background-color .15s, color .15s, box-shadow .15s, transform .1s; }
+        button:not(:disabled):active { transform: scale(.97); }
+        button:disabled { cursor: not-allowed; opacity: .6; }
+
+        /* ===== Layout & scrollbar ===== */
+        .glass-panel { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        /* Logo unit (TK/SD/SMP) di halaman tamu: tanpa lingkaran, proporsi asli, bayangan halus */
+        .logo-unit { height: 3rem; width: auto; max-width: 5rem; flex-shrink: 0; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(15, 23, 42, .22)); }
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .blogger-wrapper { position: fixed; inset: 0; z-index: 9999; background: var(--bg); overflow-y: auto; overscroll-behavior-y: contain; }
+        .blogger-wrapper::-webkit-scrollbar, .overflow-x-auto::-webkit-scrollbar { width: 8px; height: 8px; }
+        .blogger-wrapper::-webkit-scrollbar-thumb, .overflow-x-auto::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 8px; }
+        .blogger-wrapper::-webkit-scrollbar-thumb:hover, .overflow-x-auto::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+
+        /* ===== Navigasi ===== */
+        .nav-item { transition: background-color .15s, color .15s, box-shadow .15s; }
+        .nav-item.active { background-color: var(--primary) !important; color: #fff !important; box-shadow: 0 8px 18px -8px rgba(99, 102, 241, .7); }
+
+        /* ===== Tabel data ===== */
+        table thead th { white-space: nowrap; letter-spacing: .02em; }
+        table tbody td { vertical-align: middle; }
+        .table-input { width: 100%; background: #F8FAFC; border: 1px solid var(--line); border-radius: .6rem; padding: .5rem .7rem; font-size: .875rem; color: #1E293B; outline: none; transition: border-color .15s, box-shadow .15s, background-color .15s; }
+        .table-input:hover { border-color: #CBD5E1; }
+        .table-input:focus { background: #fff; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(99, 102, 241, .18); }
+        select.table-input, input[type="date"].table-input { width: auto; min-width: 9.5rem; }
+
+        .is-dup { border-color: #F59E0B; background: #FFFBEB; }
+
+        /* ===== Layout HP (di bawah 768px): top bar, tab bawah, filter ringkas, kartu ===== */
+        #fltExtra { display: none; }
+        #fltExtra.open { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: .75rem; width: 100%; align-items: end; padding-top: .25rem; }
+        .flt-btn { flex: none; display: inline-flex; align-items: center; justify-content: center; height: 2.65rem; padding: 0 .9rem; background: #fff; border: 1px solid var(--line); border-radius: .75rem; color: #475569; transition: background-color .15s, color .15s, border-color .15s, opacity .15s; }
+        .flt-btn:hover { background: #F8FAFC; }
+        .flt-btn.icon { width: 2.65rem; padding: 0; }
+        .flt-btn.on { background: #EEF2FF; border-color: #C7D2FE; color: var(--primary); }
+        .flt-btn.dim { opacity: .45; }
+        .flt-btn svg { width: 18px; height: 18px; }
+        @media (max-width: 767px) {
+            .set-input, .table-input { font-size: 16px; }              /* cegah zoom otomatis di iOS */
+            #btnDense { display: none !important; }                   /* kepadatan baris hanya untuk desktop */
+            #fltExtra.open { grid-template-columns: 1fr 1fr; }
+            #fltExtra.open > label { grid-column: 1 / -1; padding-bottom: 0; }
+            #metricCards { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: .75rem; margin: 0 -1rem 1rem; padding: 0 1rem .25rem; scrollbar-width: none; }
+            #metricCards::-webkit-scrollbar { display: none; }
+            #metricCards > * { flex: 0 0 80%; scroll-snap-align: center; min-width: 0; }
+        }
+
+        /* Kartu data (HP) */
+        .m-card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: .95rem; box-shadow: 0 1px 2px rgba(15, 23, 42, .05); }
+        .m-head { display: flex; justify-content: space-between; align-items: flex-start; gap: .75rem; }
+        .m-title { font-weight: 600; font-size: .95rem; line-height: 1.35; color: var(--ink); word-break: break-word; }
+        .m-date { font-size: .72rem; color: #64748B; background: #F1F5F9; padding: .2rem .55rem; border-radius: 999px; white-space: nowrap; }
+        .m-line { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem; margin-top: .5rem; font-size: .82rem; color: #475569; }
+        .m-tel { color: var(--primary-dark); font-weight: 500; text-decoration: none; }
+        .m-ic { width: 14px; height: 14px; flex: none; color: #94A3B8; }
+        .m-addr { margin-top: .4rem; font-size: .8rem; line-height: 1.5; color: #64748B; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .m-chips { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .65rem; }
+        .m-chip { font-size: .7rem; font-weight: 600; padding: .22rem .65rem; border-radius: 999px; background: #EEF2FF; color: var(--primary-dark); }
+        .m-chip.alt { background: #F1F5F9; color: #475569; }
+        .m-foot { display: flex; align-items: center; gap: .5rem; margin-top: .85rem; padding-top: .8rem; border-top: 1px dashed var(--line); }
+        .m-foot select { flex: 1 1 auto; }
+        .m-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .65rem; margin-top: .75rem; }
+        .m-grid.one { grid-template-columns: 1fr; }
+        .m-field label { display: block; margin-bottom: .25rem; font-size: .66rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: #94A3B8; }
+        .m-card input.table-input, .m-card select.table-input { width: 100% !important; min-width: 0; }
+        .m-st-lanjut { background: #ECFDF5 !important; color: #047857 !important; border-color: #A7F3D0 !important; }
+        .m-st-tidak { background: #FFF1F2 !important; color: #BE123C !important; border-color: #FECDD3 !important; }
+
+        /* ===== Toast, indikator simpan, tombol mini ===== */
+        .toast { pointer-events: auto; padding: .75rem 1rem; border-radius: .9rem; font-size: .85rem; line-height: 1.4; color: #fff; box-shadow: 0 10px 25px -8px rgba(15, 23, 42, .35); opacity: 0; transform: translateY(-8px); transition: opacity .25s, transform .25s; white-space: pre-line; cursor: pointer; }
+        .toast.show { opacity: 1; transform: none; }
+        .toast-info { background: #334155; } .toast-success { background: #059669; } .toast-error { background: #E11D48; }
+        .save-chip { font-size: .72rem; font-weight: 600; padding: .2rem .65rem; border-radius: 999px; }
+        .save-chip.busy { background: #EEF2FF; color: var(--primary-dark); }
+        .save-chip.ok { background: #ECFDF5; color: #047857; }
+        .save-chip.err { background: #FFF1F2; color: #BE123C; }
+        .mini-btn { width: 2rem; height: 2rem; display: inline-flex; align-items: center; justify-content: center; border-radius: .6rem; color: #64748B; background: #fff; border: 1px solid var(--line); }
+        .mini-btn:hover { color: var(--primary); border-color: #C7D2FE; }
+        .mini-btn svg { width: 15px; height: 15px; }
+        .mini-btn.spin svg { animation: miniSpin 1s linear infinite; }
+        @keyframes miniSpin { to { transform: rotate(360deg); } }
+
+        /* ===== Form tamu: kesalahan per kolom ===== */
+        .f-err { display: none; color: #E11D48; font-size: .78rem; margin-top: .3rem; }
+        .f-err.show { display: block; }
+        .f-invalid { box-shadow: 0 0 0 2px #FDA4AF !important; }
+
+        /* ===== Tabel: header menempel, urut kolom, kepadatan, aksi saat disorot ===== */
+        #tableHead th { position: sticky; top: 0; z-index: 2; background: #F8FAFC; box-shadow: inset 0 -1px 0 #E2E8F0; }
+        .sortable { cursor: pointer; user-select: none; }
+        .sortable:hover { color: var(--primary); }
+        .sort-ar { margin-left: .35rem; font-size: .68rem; color: #CBD5E1; }
+        .sort-ar.on { color: var(--primary); }
+        #dataTable.dense tbody td { padding-top: .45rem; padding-bottom: .45rem; }
+        #dataTable.dense .table-input { padding: .3rem .55rem; }
+        @media (hover: hover) and (min-width: 768px) {
+            #tableBody .act-btns { opacity: 0; transition: opacity .15s; }
+            #tableBody tr:hover .act-btns, #tableBody tr:focus-within .act-btns { opacity: 1; }
+        }
+
+        /* ===== Sidebar dapat diciutkan (desktop) ===== */
+        @media (min-width: 768px) {
+            #sideBar { transition: width .2s ease; }
+            #sideBar.collapsed { width: 5rem; padding-left: 1rem; padding-right: 1rem; }
+            #sideBar.collapsed h2, #sideBar.collapsed span[class*="md:inline"] { display: none; }
+            #sideBar.collapsed .nav-item { font-size: 0; justify-content: center; }
+            #sideBar.collapsed .nav-item svg { margin: 0; }
+            #sideBar.collapsed #btnSide svg { transform: rotate(180deg); margin: 0 auto; }
+            #sideBar.collapsed button { justify-content: center; }
+        }
+
+        /* ===== HP: geser kartu, WhatsApp, muat lebih banyak, tarik-untuk-muat-ulang, panel bawah ===== */
+        .m-swipe { position: relative; border-radius: 16px; overflow: hidden; }
+        .m-under { position: absolute; top: 0; right: 0; bottom: 0; width: 128px; display: flex; }
+        .m-under button { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .25rem; color: #fff; font-size: .7rem; font-weight: 600; }
+        .m-under .u-edit { background: var(--primary); }
+        .m-under .u-del { background: #E11D48; }
+        .m-under svg { width: 18px; height: 18px; }
+        .m-swipe .m-card { position: relative; z-index: 1; transition: transform .22s ease; touch-action: pan-y; }
+        .m-swipe.dragging .m-card { transition: none; }
+        .m-swipe.open .m-card { transform: translateX(-128px); }
+        .m-wa { flex: none; display: inline-flex; align-items: center; gap: .3rem; padding: .18rem .6rem .18rem .45rem; border-radius: 999px; background: #DCFCE7; color: #15803D; font-size: .72rem; font-weight: 600; text-decoration: none; }
+        .m-wa svg { width: 13px; height: 13px; }
+        .m-load { display: block; width: 100%; padding: .85rem; border-radius: .9rem; background: #fff; border: 1px dashed #C7D2FE; color: var(--primary-dark); font-weight: 600; font-size: .85rem; }
+        .ptr { position: fixed; top: 0; left: 50%; margin-left: -18px; width: 36px; height: 36px; border-radius: 50%; background: #fff; box-shadow: 0 4px 14px rgba(15, 23, 42, .18); display: flex; align-items: center; justify-content: center; color: var(--primary); z-index: 60; transform: translateY(-60px); opacity: 0; pointer-events: none; transition: transform .2s, opacity .2s; }
+        .ptr.pulling { opacity: 1; transition: none; }
+        .ptr svg { width: 18px; height: 18px; }
+        .ptr.loading svg { animation: miniSpin 1s linear infinite; }
+        @media (max-width: 767px) {
+            #editModal > div, #toolModal > div { animation: sheetUp .25s ease-out; }
+            #editModal > div::before, #toolModal > div::before { content: ''; display: block; width: 2.5rem; height: 4px; border-radius: 2px; background: #CBD5E1; margin: .6rem auto 0; }
+        }
+        @keyframes sheetUp { from { transform: translateY(100%); } to { transform: none; } }
+
+        /* ===== Halaman Pengaturan ===== */
+        .set-label { display: block; font-size: .85rem; font-weight: 600; color: #1E293B; margin-bottom: .25rem; }
+        .set-input { width: 100%; background: #F8FAFC; border: 1px solid var(--line); border-radius: .6rem; padding: .55rem .75rem; font-size: .875rem; color: #1E293B; outline: none; transition: border-color .15s, box-shadow .15s, background-color .15s; }
+        .set-input:hover { border-color: #CBD5E1; }
+        .set-input:focus { background: #fff; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(99, 102, 241, .18); }
+        .set-card { background: #fff; border: 1px solid var(--line); border-radius: 1rem; box-shadow: 0 1px 3px rgba(15, 23, 42, .05); transition: border-color .15s, box-shadow .15s; }
+        .set-card:focus-within { border-color: #C7D2FE; box-shadow: 0 4px 16px -6px rgba(99, 102, 241, .25); }
+    </style>
+</head>
+<body>
+
+<div id="appRoot" class="blogger-wrapper text-slate-800">
+    
+    <!-- 1. VIEW: FORMULIR PUBLIK -->
+    <div id="viewForm" class="min-h-screen py-10 px-4 flex justify-center items-start">
+        <div class="glass-panel w-full max-w-3xl rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-8 border border-white">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8 border-b border-slate-100 pb-6">
+                <div class="mb-4 md:mb-0 text-center md:text-left">
+                    <h1 class="text-2xl font-bold text-slate-900">Buku Tamu Survei PPDB</h1>
+                    <p class="text-slate-500 text-sm">SIT Al Madani Kuningan - Jawa Barat</p>
+                </div>
+                <div class="flex space-x-3">
+                        <img src="https://i.ibb.co.com/hJNMvBsY/logo-tk.png" alt="Logo TK" class="logo-unit">
+                        <img src="https://i.ibb.co.com/FkVHd58j/logo-sd.png" alt="Logo SD" class="logo-unit">
+                        <img src="https://i.ibb.co.com/gHhVpWq/logo-smp.png" alt="Logo SMP" class="logo-unit">
+                </div>
+            </div>
+
+            <form id="ppdbForm" onsubmit="submitForm(event)" novalidate class="space-y-5">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Tanggal Kunjungan</label>
+                        <input type="date" id="f_tanggal" class="w-full bg-slate-50 border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none" required>
+                        <p class="f-err" id="err_tgl"></p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Metode Survei</label>
+                        <select id="f_metode" class="w-full bg-slate-50 border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none" required>
+                            <option value="Offline">Offline</option>
+                            <option value="Online">Online</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Nama Ayah</label>
+                        <input type="text" id="f_ayah" autocomplete="name" class="w-full bg-slate-50 border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Nama Ibu</label>
+                        <input type="text" id="f_ibu" autocomplete="off" class="w-full bg-slate-50 border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none">
+                    </div>
+                </div>
+
+                <p class="f-err -mt-3" id="err_ortu"></p>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Alamat Domisili</label>
+                    <textarea id="f_alamat" rows="2" autocomplete="street-address" class="w-full bg-slate-50 border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none" required></textarea>
+                    <p class="f-err" id="err_alamat"></p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Nomor WhatsApp / HP</label>
+                        <input type="tel" id="f_hp" inputmode="numeric" autocomplete="tel" maxlength="16" oninput="formatHpInput(this)" placeholder="08xx-xxxx-xxxx" class="w-full bg-slate-50 border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none" required>
+                        <p class="f-err" id="err_hp"></p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Tujuan Berkunjung</label>
+                        <select id="f_tujuan" class="w-full bg-slate-50 border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none" required>
+                            <option value="Survei PPDB">Survei PPDB</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Jenjang Tujuan</label>
+                    <div class="flex space-x-4">
+                        <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="f_jenjang" value="TK IT" onchange="toggleUnitOpts()" class="text-primary" required> <span>TK IT</span></label>
+                        <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="f_jenjang" value="SD IT" onchange="toggleUnitOpts()" class="text-primary"> <span>SD IT</span></label>
+                        <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="f_jenjang" value="SMP IT" onchange="toggleUnitOpts()" class="text-primary"> <span>SMP IT</span></label>
+                    </div>
+                </div>
+
+                <p class="f-err -mt-3" id="err_jenjang"></p>
+
+                <div id="wrap_kelompok" class="hidden bg-sky-50 p-4 rounded-xl">
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Pilih Kelompok (TK)</label>
+                    <div class="flex space-x-4">
+                        <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="f_sub" value="Kelompok A" class="text-primary"> <span>Kelompok A</span></label>
+                        <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="f_sub" value="Kelompok B" class="text-primary"> <span>Kelompok B</span></label>
+                    </div>
+                </div>
+
+                <div id="wrap_program" class="hidden bg-indigo-50 p-4 rounded-xl">
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Pilih Program (SMP)</label>
+                    <div class="flex space-x-4">
+                        <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="f_sub" value="Reguler" class="text-primary"> <span>Reguler</span></label>
+                        <label class="flex items-center space-x-2 cursor-pointer"><input type="radio" name="f_sub" value="Boarding" class="text-primary"> <span>Boarding</span></label>
+                    </div>
+                </div>
+
+                <p class="f-err" id="err_sub"></p>
+                <div style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label>Website <input type="text" id="f_website" name="website" tabindex="-1" autocomplete="off"></label></div>
+                <button type="submit" id="btnSubmit" class="w-full bg-primary hover:bg-primaryDark text-white font-semibold py-4 rounded-2xl shadow-lg shadow-indigo-200 transition-all mt-6 flex justify-center items-center">
+                    <i data-feather="send" class="w-5 h-5 mr-2"></i> Kirim Buku Tamu
+                </button>
+            </form>
+            <div id="formSuccess" class="hidden text-center py-10 px-2">
+                <div class="mx-auto w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mb-5"><i data-feather="check-circle" class="w-10 h-10"></i></div>
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">Terima kasih!</h2>
+                <p class="text-slate-500 text-sm mb-5">Data kunjungan Anda sudah kami terima.<br>Selamat datang di SIT Al Madani Kuningan.</p>
+                <div id="successSummary" class="inline-block bg-slate-50 text-slate-600 text-sm rounded-xl px-5 py-3 mb-6"></div>
+                <div><button type="button" onclick="showFormAgain()" class="px-6 py-3 text-sm font-semibold bg-primary text-white rounded-xl hover:bg-primaryDark shadow-lg shadow-indigo-200">Isi Formulir Lagi</button></div>
+            </div>
+            <div class="mt-8 text-center">
+                <button onclick="switchView('login')" class="text-xs text-slate-400 hover:text-primary">Login Admin</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. VIEW: LOGIN ADMIN -->
+    <div id="viewLogin" class="hidden min-h-screen flex items-center justify-center p-4">
+        <div class="glass-panel w-full max-w-sm rounded-[32px] p-8 shadow-2xl text-center">
+            <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-primary"><i data-feather="lock" class="w-8 h-8"></i></div>
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Admin PPDB</h2>
+            <form onsubmit="doLogin(event)" class="space-y-4 text-left">
+                <input type="text" id="l_user" placeholder="Username" class="w-full bg-slate-50 border-none rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-primary" required>
+                <input type="password" id="l_pass" placeholder="Password" class="w-full bg-slate-50 border-none rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-primary" required>
+                <button type="submit" id="btnLogin" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 rounded-xl transition-all">Masuk</button>
+            </form>
+            <button onclick="switchView('form')" class="mt-4 text-sm text-primary">Kembali ke Form</button>
+        </div>
+    </div>
+
+    <!-- 3. VIEW: DASHBOARD ADMIN -->
+    <div id="viewAdmin" class="hidden min-h-screen flex flex-col md:flex-row">
+        <div id="sideBar" class="w-full md:w-64 bg-white md:min-h-screen border-r border-slate-100 flex flex-row md:flex-col items-center md:items-stretch justify-between md:justify-start px-4 py-3 md:p-6 md:rounded-r-[32px] shadow-sm sticky top-0 md:relative z-20 md:z-10">
+            <div class="flex items-center space-x-3 md:mb-10">
+                <div class="bg-primary text-white p-2 rounded-xl"><i data-feather="grid"></i></div>
+                <h2 class="font-bold text-base md:text-lg text-slate-900 leading-tight">Admin<br class="hidden md:block"> PPDB</h2>
+            </div>
+            <nav class="fixed md:static bottom-0 inset-x-0 z-30 flex md:block justify-around gap-1 md:gap-0 bg-white md:bg-transparent border-t md:border-0 border-slate-100 px-2 pt-1.5 pb-[max(0.5rem,env(safe-area-inset-bottom))] md:p-0 md:space-y-2 md:flex-1 shadow-[0_-4px_14px_rgba(15,23,42,0.07)] md:shadow-none">
+                <a href="#" onclick="switchUnit('TK IT')" id="nav_TK IT" class="nav-item flex flex-col md:flex-row flex-1 md:flex-none items-center justify-center md:justify-start p-2 md:p-3 rounded-xl text-[11px] md:text-base text-slate-500 hover:bg-slate-50 transition-all font-medium"><i data-feather="smile" class="w-5 h-5 mr-0 md:mr-3 mb-0.5 md:mb-0"></i> TK IT</a>
+                <a href="#" onclick="switchUnit('SD IT')" id="nav_SD IT" class="nav-item flex flex-col md:flex-row flex-1 md:flex-none items-center justify-center md:justify-start p-2 md:p-3 rounded-xl text-[11px] md:text-base text-slate-500 hover:bg-slate-50 transition-all font-medium"><i data-feather="book-open" class="w-5 h-5 mr-0 md:mr-3 mb-0.5 md:mb-0"></i> SD IT</a>
+                <a href="#" onclick="switchUnit('SMP IT')" id="nav_SMP IT" class="nav-item flex flex-col md:flex-row flex-1 md:flex-none items-center justify-center md:justify-start p-2 md:p-3 rounded-xl text-[11px] md:text-base text-slate-500 hover:bg-slate-50 transition-all font-medium"><i data-feather="monitor" class="w-5 h-5 mr-0 md:mr-3 mb-0.5 md:mb-0"></i> SMP IT</a>
+            </nav>
+            <div class="flex md:block gap-1 md:border-t border-slate-100 md:pt-4 md:mt-4">
+                <button onclick="openSettings()" title="Pengaturan" aria-label="Pengaturan" class="md:w-full text-left flex items-center p-2.5 md:p-3 text-sm text-slate-500 hover:text-primary transition-all"><i data-feather="settings" class="w-5 h-5 md:w-4 md:h-4 md:mr-2"></i><span class="hidden md:inline">Pengaturan</span></button>
+                <button onclick="switchView('login')" title="Logout" aria-label="Logout" class="md:w-full text-left flex items-center p-2.5 md:p-3 text-sm text-red-500 hover:bg-red-50 rounded-xl transition-all"><i data-feather="log-out" class="w-5 h-5 md:w-4 md:h-4 md:mr-2"></i><span class="hidden md:inline">Logout</span></button>
+                <button type="button" onclick="toggleSidebar()" id="btnSide" title="Ciutkan menu" aria-label="Ciutkan menu" class="hidden md:flex md:w-full items-center justify-center p-3 text-sm text-slate-400 hover:text-primary transition-all"><i data-feather="chevrons-left" class="w-4 h-4"></i></button>
+            </div>
+        </div>
+
+        <div class="flex-1 p-4 pb-28 md:p-10 md:h-screen md:overflow-y-auto hide-scroll relative">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-3 mb-4 md:mb-8">
+                <div>
+                    <h2 class="text-xl md:text-3xl font-bold text-slate-900" id="dashTitle">Dashboard TK IT</h2>
+                    <p class="text-sm md:text-base text-slate-500">Tahun Ajaran <span id="dashTahun">...</span></p>
+                    <div class="flex items-center flex-wrap gap-2 mt-1.5">
+                        <span id="saveChip" class="save-chip hidden"></span>
+                        <span id="lastSync" class="text-xs text-slate-400"></span>
+                        <button type="button" id="btnRefresh" onclick="refreshNow()" title="Muat ulang data" aria-label="Muat ulang data" class="mini-btn"><i data-feather="refresh-cw"></i></button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-2 md:flex md:gap-3">
+                    <button onclick="triggerPDF('semua')" class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full text-sm font-medium shadow-sm hover:shadow flex items-center justify-center"><i data-feather="printer" class="w-4 h-4 mr-2"></i> Cetak Semua</button>
+                    <button onclick="triggerPDF('lanjut')" class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium shadow-sm shadow-indigo-200 hover:bg-primaryDark flex items-center justify-center"><i data-feather="award" class="w-4 h-4 mr-2"></i> Cetak Lanjut</button>
+                </div>
+            </div>
+
+            <!-- Metrik Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8" id="metricCards"></div>
+
+            <div class="bg-white rounded-[24px] shadow-sm border border-slate-100 overflow-hidden">
+                <div class="flex border-b border-slate-100 p-2">
+                    <button onclick="switchSubTab('awal')" id="tab_awal" class="sub-tab flex-1 py-2.5 md:py-3 text-xs md:text-sm font-semibold rounded-xl transition-all bg-indigo-50 text-primary">Data Tamu</button>
+                    <button onclick="switchSubTab('lanjut')" id="tab_lanjut" class="sub-tab flex-1 py-2.5 md:py-3 text-xs md:text-sm font-semibold rounded-xl transition-all text-slate-400 hover:text-slate-600">Data Lanjut<span class="hidden md:inline"> Mendaftar</span></button>
+                </div>
+                <!-- Pencarian & Filter -->
+                <div class="px-4 pt-4">
+                    <div class="flex flex-wrap items-end gap-2 md:gap-3">
+                        <div class="relative flex-1 min-w-[150px] md:min-w-[220px]">
+                            <i data-feather="search" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                            <input type="text" id="flt_q" aria-label="Cari data" oninput="onFilterInput()" placeholder="Nama ortu, nama siswa, alamat, atau no. HP..." class="set-input" style="padding-left:2.25rem">
+                        </div>
+                        <button type="button" id="btnFltToggle" onclick="toggleFilter()" aria-expanded="false" aria-controls="fltExtra" title="Filter" class="flt-btn"><i data-feather="filter"></i><span class="hidden md:inline ml-2 text-sm font-medium">Filter</span><span id="fltBadge" class="hidden ml-1.5 min-w-[18px] h-[18px] px-1 rounded-full bg-primary text-white text-[10px] leading-[18px] text-center font-semibold"></span></button>
+                        <button type="button" id="btnFltReset" onclick="resetFilter()" title="Reset filter" aria-label="Reset filter" class="flt-btn icon"><i data-feather="rotate-ccw"></i></button>
+                        <button type="button" onclick="openTrash()" title="Tempat Sampah" aria-label="Tempat Sampah" class="flt-btn icon"><i data-feather="trash-2"></i></button>
+                        <button type="button" id="btnDense" onclick="toggleDense()" title="Kepadatan baris" aria-label="Kepadatan baris" class="flt-btn icon hidden md:inline-flex"><i data-feather="align-justify"></i></button>
+                        <div id="fltExtra">
+                        <div class="col-span-2 md:hidden"><label class="set-label text-xs">Urutkan</label>
+                            <select id="flt_sort" onchange="onSortSelect(this.value)" class="set-input"><option value="">Bawaan</option><option value="tgl_desc">Terbaru</option><option value="tgl_asc">Terlama</option><option value="nama_asc">Nama A–Z</option><option value="nama_desc">Nama Z–A</option></select></div>
+                        <div><label class="set-label text-xs">Dari tanggal</label><input type="date" id="flt_from" onchange="onFilterChange()" class="set-input"></div>
+                        <div><label class="set-label text-xs">Sampai tanggal</label><input type="date" id="flt_to" onchange="onFilterChange()" class="set-input"></div>
+                        <div class="f-awal"><label class="set-label text-xs">Metode</label>
+                            <select id="flt_metode" onchange="onFilterChange()" class="set-input"><option value="">Semua</option><option value="Offline">Offline</option><option value="Online">Online</option></select></div>
+                        <div class="f-awal"><label class="set-label text-xs">Keterangan</label>
+                            <select id="flt_ket" onchange="onFilterChange()" class="set-input"><option value="">Semua</option><option value="Belum">Belum</option><option value="Lanjut">Lanjut (Mendaftar)</option><option value="Tidak">Tidak</option></select></div>
+                        <div class="f-lanjut hidden"><label class="set-label text-xs">Gelombang</label>
+                            <select id="flt_gel" onchange="onFilterChange()" class="set-input"><option value="">Semua</option><option value="Gel 1">Gelombang 1</option><option value="Gel 2">Gelombang 2</option></select></div>
+                        <label class="flex items-center gap-2 text-sm text-slate-600 pb-2.5 cursor-pointer"><input type="checkbox" id="flt_dup" onchange="onFilterChange()" class="rounded text-primary"> Hanya data ganda</label>
+                        </div>
+                    </div>
+                    <div id="filterInfo" class="text-xs text-slate-400 mt-2 min-h-[1rem]"></div>
+                </div>
+                <div id="tblWrap" class="hidden md:block px-4 pb-4 pt-0 mt-3 overflow-auto min-h-[400px] md:max-h-[68vh]">
+                    <table id="dataTable" class="w-full text-left text-sm">
+                        <thead id="tableHead"></thead>
+                        <tbody id="tableBody" class="text-slate-700"></tbody>
+                    </table>
+                </div>
+                <div id="mobileList" class="md:hidden px-3 pt-3 pb-1 space-y-3 min-h-[320px]"></div>
+                
+                <!-- Pagination Controls -->
+                <div class="hidden md:flex justify-between items-center p-4 border-t border-slate-100">
+                    <button onclick="changePage(-1)" id="btnPrevPage" class="px-4 py-2 text-sm bg-slate-100 rounded-lg text-slate-600 hover:bg-slate-200 disabled:opacity-50">Sebelumnya</button>
+                    <div class="flex items-center gap-3"><span id="pageIndicator" class="text-sm text-slate-500 font-medium">Halaman 1 / 1</span>
+                        <select id="pageSize" onchange="setPageSize(this.value)" aria-label="Jumlah baris per halaman" class="set-input" style="width:auto;padding:.3rem .6rem;font-size:.75rem"><option value="10">10 / halaman</option><option value="25">25 / halaman</option><option value="50">50 / halaman</option><option value="100">100 / halaman</option></select></div>
+                    <button onclick="changePage(1)" id="btnNextPage" class="px-4 py-2 text-sm bg-slate-100 rounded-lg text-slate-600 hover:bg-slate-200 disabled:opacity-50">Selanjutnya</button>
+                </div>
+            </div>
+            
+                    </div>
+    </div>
+
+    <!-- 4. VIEW: PENGATURAN SISTEM -->
+    <div id="viewSettings" class="hidden min-h-screen p-4 md:p-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-start justify-between gap-3 mb-6">
+          <div>
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 flex items-center"><i data-feather="settings" class="w-7 h-7 mr-3 text-primary"></i> Pengaturan Sistem PPDB</h2>
+            <p class="text-slate-500 text-sm mt-1">Kelola identitas sekolah, tahun ajaran, logo, dan kop surat resmi.</p>
+          </div>
+          <button onclick="closeSettings()" class="self-start px-4 py-2 text-sm font-medium bg-white border border-slate-300 text-slate-600 rounded-lg hover:bg-slate-50 flex items-center"><i data-feather="arrow-left" class="w-4 h-4 mr-2"></i> Kembali ke Dashboard</button>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+          <div class="space-y-6">
+            <div class="set-card">
+              <div class="px-5 py-3 border-b border-slate-100 font-bold text-slate-900 flex items-center"><i data-feather="home" class="w-5 h-5 mr-2 text-primary"></i> Identitas Sekolah &amp; Periode</div>
+              <div class="p-5 space-y-4">
+                <div class=""><label class="set-label">Nama Resmi Sekolah / Yayasan</label><input type="text" id="p_nama" class="set-input" oninput="renderKop()"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div class=""><label class="set-label">Tahun Ajaran PPDB</label><input type="text" id="p_tahun" class="set-input" oninput="renderKop()"></div>
+                  <div class=""><label class="set-label">Gelombang Pendaftaran</label><input type="text" id="p_gel" class="set-input" oninput="renderKop()"></div>
+                  <div class=""><label class="set-label">NPSN Sekolah</label><input type="text" id="p_npsn" class="set-input" oninput="renderKop()"></div>
+                  <div><label class="set-label">Predikat Akreditasi</label><select id="p_akred" class="set-input" onchange="renderKop()"><option>Terakreditasi A (Unggul)</option><option>Terakreditasi B (Baik)</option><option>Terakreditasi C (Cukup)</option><option>Belum Terakreditasi</option></select></div>
+                </div>
+              </div>
+            </div>
+            <div class="set-card">
+              <div class="px-5 py-3 border-b border-slate-100 font-bold text-slate-900 flex items-center justify-between"><span class="flex items-center"><i data-feather="image" class="w-5 h-5 mr-2 text-primary"></i> Pengaturan Logo Kop Surat</span><span class="text-[11px] font-semibold bg-indigo-100 text-primary px-2 py-0.5 rounded">1 atau 2 Logo</span></div>
+              <div class="p-5 space-y-4">
+                <div class="set-label">Pilihan Tampilan Logo Kop</div>
+                <div class="grid grid-cols-3 gap-2">
+                  <label class="mode-opt cursor-pointer border-2 border-slate-200 rounded-xl p-3 text-center transition" data-mode="DUA_LOGO"><input type="radio" name="p_mode" value="DUA_LOGO" class="sr-only" onchange="onModeChange()"><div class="text-sm font-semibold text-slate-800">2 Logo (Kiri &amp; Kanan)</div><div class="text-[11px] text-slate-400">Standar Kop Resmi</div></label>
+                  <label class="mode-opt cursor-pointer border-2 border-slate-200 rounded-xl p-3 text-center transition" data-mode="SATU_LOGO"><input type="radio" name="p_mode" value="SATU_LOGO" class="sr-only" onchange="onModeChange()"><div class="text-sm font-semibold text-slate-800">1 Logo (Kiri Saja)</div><div class="text-[11px] text-slate-400">Logo Sekolah</div></label>
+                  <label class="mode-opt cursor-pointer border-2 border-slate-200 rounded-xl p-3 text-center transition" data-mode="TANPA_LOGO"><input type="radio" name="p_mode" value="TANPA_LOGO" class="sr-only" onchange="onModeChange()"><div class="text-sm font-semibold text-slate-800">Tanpa Logo</div><div class="text-[11px] text-slate-400">Teks Saja</div></label>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div id="card_logo_kiri" class="bg-slate-50 border border-slate-200 rounded-xl p-4 transition">
+  <div class="flex justify-between items-center mb-3"><span class="text-sm font-semibold text-slate-800">Logo Kiri (Sekolah / PPDB)</span>
+    <label class="relative inline-flex items-center cursor-pointer"><input type="checkbox" id="p_logo_kiri_aktif" class="sr-only peer" onchange="renderKop()"><div class="w-10 h-5 bg-slate-300 rounded-full peer-checked:bg-primary transition after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:w-4 after:h-4 after:bg-white after:rounded-full after:transition peer-checked:after:translate-x-5"></div></label></div>
+  <div class="mt-3 first:mt-0"><div class="text-xs font-semibold text-slate-600 mb-1">Logo TK IT</div>
+    <input type="text" id="p_logo_kiri_tk_url" class="set-input" placeholder="URL gambar atau upload" oninput="onLogoUrlInput('kiri_tk')">
+    <div class="flex items-center gap-2 mt-2">
+      <div id="thumb_kiri_tk" class="w-10 h-10 shrink-0 rounded-lg border border-slate-200 bg-white flex items-center justify-center overflow-hidden" style="font-size:22px"></div>
+      <input type="file" id="file_kiri_tk" accept="image/png,image/jpeg,image/webp" class="hidden" onchange="onLogoFile('kiri_tk', this)">
+      <button type="button" id="btn_up_kiri_tk" onclick="document.getElementById('file_kiri_tk').click()" class="px-3 py-1.5 text-xs font-medium bg-primary text-white rounded-lg hover:bg-primaryDark">Upload Gambar</button>
+      <button type="button" onclick="clearLogo('kiri_tk')" class="px-3 py-1.5 text-xs font-medium bg-white border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50">Hapus</button>
+    </div></div>
+  <div class="mt-3 first:mt-0"><div class="text-xs font-semibold text-slate-600 mb-1">Logo SD IT</div>
+    <input type="text" id="p_logo_kiri_sd_url" class="set-input" placeholder="URL gambar atau upload" oninput="onLogoUrlInput('kiri_sd')">
+    <div class="flex items-center gap-2 mt-2">
+      <div id="thumb_kiri_sd" class="w-10 h-10 shrink-0 rounded-lg border border-slate-200 bg-white flex items-center justify-center overflow-hidden" style="font-size:22px"></div>
+      <input type="file" id="file_kiri_sd" accept="image/png,image/jpeg,image/webp" class="hidden" onchange="onLogoFile('kiri_sd', this)">
+      <button type="button" id="btn_up_kiri_sd" onclick="document.getElementById('file_kiri_sd').click()" class="px-3 py-1.5 text-xs font-medium bg-primary text-white rounded-lg hover:bg-primaryDark">Upload Gambar</button>
+      <button type="button" onclick="clearLogo('kiri_sd')" class="px-3 py-1.5 text-xs font-medium bg-white border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50">Hapus</button>
+    </div></div>
+  <div class="mt-3 first:mt-0"><div class="text-xs font-semibold text-slate-600 mb-1">Logo SMP IT</div>
+    <input type="text" id="p_logo_kiri_smp_url" class="set-input" placeholder="URL gambar atau upload" oninput="onLogoUrlInput('kiri_smp')">
+    <div class="flex items-center gap-2 mt-2">
+      <div id="thumb_kiri_smp" class="w-10 h-10 shrink-0 rounded-lg border border-slate-200 bg-white flex items-center justify-center overflow-hidden" style="font-size:22px"></div>
+      <input type="file" id="file_kiri_smp" accept="image/png,image/jpeg,image/webp" class="hidden" onchange="onLogoFile('kiri_smp', this)">
+      <button type="button" id="btn_up_kiri_smp" onclick="document.getElementById('file_kiri_smp').click()" class="px-3 py-1.5 text-xs font-medium bg-primary text-white rounded-lg hover:bg-primaryDark">Upload Gambar</button>
+      <button type="button" onclick="clearLogo('kiri_smp')" class="px-3 py-1.5 text-xs font-medium bg-white border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50">Hapus</button>
+    </div></div>
+  <p class="text-[11px] text-slate-400 mt-3">Kosongkan untuk ikon default kubah masjid 🕌. Di PDF, logo mengikuti jenjang yang dicetak. PNG/JPG/WEBP, maks 1 MB.</p>
+</div>
+                  <div id="card_logo_kanan" class="bg-slate-50 border border-slate-200 rounded-xl p-4 transition">
+  <div class="flex justify-between items-center mb-2"><span class="text-sm font-semibold text-slate-800">Logo Kanan (Yayasan / JSIT)</span>
+    <label class="relative inline-flex items-center cursor-pointer"><input type="checkbox" id="p_logo_kanan_aktif" class="sr-only peer" onchange="renderKop()"><div class="w-10 h-5 bg-slate-300 rounded-full peer-checked:bg-primary transition after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:w-4 after:h-4 after:bg-white after:rounded-full after:transition peer-checked:after:translate-x-5"></div></label></div>
+  <input type="text" id="p_logo_kanan_url" class="set-input" placeholder="URL gambar atau upload dari perangkat" oninput="onLogoUrlInput('kanan')">
+  <div class="flex items-center gap-2 mt-3">
+    <div id="thumb_kanan" class="w-12 h-12 shrink-0 rounded-lg border border-slate-200 bg-white flex items-center justify-center overflow-hidden" style="font-size:26px"></div>
+    <input type="file" id="file_kanan" accept="image/png,image/jpeg,image/webp" class="hidden" onchange="onLogoFile('kanan', this)">
+    <button type="button" id="btn_up_kanan" onclick="document.getElementById('file_kanan').click()" class="px-3 py-2 text-xs font-medium bg-primary text-white rounded-lg hover:bg-primaryDark">Upload Gambar</button>
+    <button type="button" onclick="clearLogo('kanan')" class="px-3 py-2 text-xs font-medium bg-white border border-slate-200 text-slate-600 rounded-lg hover:bg-slate-50">Hapus Logo</button>
+  </div>
+  <p class="text-[11px] text-slate-400 mt-2">Kosongkan untuk ikon default bintang 🌟. PNG/JPG/WEBP, maks 1 MB, tersimpan di Google Drive.</p>
+</div>
+                </div>
+              </div>
+            </div>
+            <div class="set-card">
+              <div class="px-5 py-3 border-b border-slate-100 font-bold text-slate-900 flex items-center"><i data-feather="mail" class="w-5 h-5 mr-2 text-primary"></i> Pengaturan Teks Kop Surat &amp; Lembar Cetak</div>
+              <div class="p-5 space-y-4">
+                <div class=""><label class="set-label">Kop Baris 1 (Nama Yayasan)</label><input type="text" id="p_kop1" class="set-input" oninput="renderKop()"></div>
+                <div class=""><label class="set-label">Kop Baris 2 - TK IT (Nama Lembaga / Satuan Pendidikan)</label><input type="text" id="p_kop2_tk" class="set-input font-bold" oninput="renderKop()"></div>
+<div class=""><label class="set-label">Kop Baris 2 - SD IT (Nama Lembaga / Satuan Pendidikan)</label><input type="text" id="p_kop2_sd" class="set-input font-bold" oninput="renderKop()"></div>
+<div class=""><label class="set-label">Kop Baris 2 - SMP IT (Nama Lembaga / Satuan Pendidikan)</label><input type="text" id="p_kop2_smp" class="set-input font-bold" oninput="renderKop()"></div>
+                <div class=""><label class="set-label">Kop Baris 3 (Alamat Lengkap &amp; Kode Pos)</label><input type="text" id="p_kop3" class="set-input" oninput="renderKop()"></div>
+                <div class=""><label class="set-label">Kop Baris 4 (Kontak Telepon, WA, Web, Email)</label><input type="text" id="p_kop4" class="set-input" oninput="renderKop()"></div>
+                <hr class="border-slate-200">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div class=""><label class="set-label">Kota Penandatanganan</label><input type="text" id="p_kota" class="set-input" oninput="renderKop()"></div>
+                  <div class=""><label class="set-label">Nama Pejabat / Ketua Panitia</label><input type="text" id="p_nama_ttd" class="set-input" oninput="renderKop()"></div>
+                  <div class=""><label class="set-label">Jabatan Penandatangan</label><input type="text" id="p_jabatan" class="set-input" oninput="renderKop()"></div>
+                  <div class=""><label class="set-label">NIP / ID Petugas</label><input type="text" id="p_nip" class="set-input" oninput="renderKop()"></div>
+                </div>
+              </div>
+            </div>
+            <div class="set-card">
+              <div class="px-5 py-3 border-b border-slate-100 font-bold text-slate-900 flex items-center"><i data-feather="database" class="w-5 h-5 mr-2 text-primary"></i> Cadangan Data (Google Drive)</div>
+              <div class="p-5 space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div><label class="set-label">Jadwal Cadangan Otomatis</label><select id="p_bk_mode" class="set-input"><option value="OFF">Nonaktif</option><option value="HARIAN">Setiap hari (sekitar 02.00)</option><option value="MINGGUAN">Setiap minggu (Minggu, sekitar 02.00)</option></select></div>
+                  <div><label class="set-label">Simpan Cadangan Terakhir</label><input type="number" id="p_bk_keep" min="3" max="60" class="set-input"></div>
+                </div>
+                <p class="text-[11px] text-slate-400">Cadangan berupa salinan seluruh spreadsheet di folder <b>Cadangan_PPDB</b> pada Google Drive Anda. Cadangan yang melewati batas dihapus otomatis (dipindah ke tempat sampah Drive). Jadwal berlaku setelah klik <b>Simpan Pengaturan</b>.</p>
+                <div class="flex items-center gap-3"><button type="button" id="btnBackup" onclick="backupNowUI()" class="px-5 py-2.5 text-sm font-semibold bg-white border border-primary text-primary rounded-xl hover:bg-indigo-50">Cadangkan Sekarang</button></div>
+                <div><div class="set-label">Cadangan Terbaru</div><div id="bkList" class="text-xs text-slate-500"></div></div>
+              </div>
+            </div>
+            <div class="set-card">
+              <div class="px-5 py-3 border-b border-slate-100 font-bold text-slate-900 flex items-center"><i data-feather="lock" class="w-5 h-5 mr-2 text-primary"></i> Keamanan Akun</div>
+              <div class="p-5 space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div><label class="set-label">Password Lama</label><input type="password" id="p_pw_old" autocomplete="current-password" class="set-input"></div>
+                  <div><label class="set-label">Password Baru</label><input type="password" id="p_pw_new" autocomplete="new-password" class="set-input" placeholder="Minimal 8 karakter"></div>
+                  <div><label class="set-label">Ulangi Password Baru</label><input type="password" id="p_pw_new2" autocomplete="new-password" class="set-input"></div>
+                </div>
+                <div class="flex items-center gap-3"><button type="button" id="btnPw" onclick="ubahPassword()" class="px-5 py-2.5 text-sm font-semibold bg-white border border-primary text-primary rounded-xl hover:bg-indigo-50">Ubah Password</button>
+                <span class="text-[11px] text-slate-400">Password disimpan terenkripsi (hash). Login dikunci 15 menit setelah 5 kali salah.</span></div>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-3">
+              <button id="btnSimpanSet" onclick="simpanPengaturan()" class="px-6 py-3 text-sm font-semibold bg-primary text-white rounded-xl hover:bg-primaryDark shadow-lg shadow-indigo-200">Simpan Pengaturan</button>
+              <button onclick="resetPengaturan()" class="px-5 py-3 text-sm font-medium bg-white border border-slate-300 text-slate-600 rounded-xl hover:bg-slate-50">Reset ke Default</button>
+              <span id="setStatus" class="text-xs text-slate-400"></span>
+            </div>
+          </div>
+          <div class="lg:sticky lg:top-6 rounded-xl overflow-hidden shadow-sm border border-slate-200">
+            <div class="bg-slate-900 text-white px-4 py-3 flex items-center justify-between text-sm font-semibold"><span class="flex items-center"><i data-feather="eye" class="w-4 h-4 mr-2"></i> Live Preview Kop Surat Resmi</span><span id="kopBadge" class="text-[10px] bg-emerald-600 px-2 py-0.5 rounded">DUA_LOGO</span></div>
+            <div id="prevJTabs" class="bg-slate-800 px-4 pb-3 flex gap-2"><button type="button" data-j="tk" onclick="setPrevJ('tk')">TK IT</button><button type="button" data-j="sd" onclick="setPrevJ('sd')">SD IT</button><button type="button" data-j="smp" onclick="setPrevJ('smp')">SMP IT</button></div>
+            <div class="bg-slate-100 p-4"><div id="kopPreview" class="bg-white rounded-lg border border-slate-200 p-4"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL EDIT DATA TAMU -->
+    <div id="editModal" class="hidden fixed inset-0 z-50 bg-slate-900/50 items-end md:items-center justify-center md:p-4 overflow-y-auto" onclick="if(event.target===this)closeEdit()">
+      <div class="bg-white rounded-t-3xl md:rounded-2xl shadow-2xl w-full max-w-lg md:my-auto max-h-[92vh] md:max-h-none overflow-y-auto md:overflow-visible">
+        <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between">
+          <h3 class="font-bold text-slate-900 flex items-center"><i data-feather="edit-2" class="w-5 h-5 mr-2 text-primary"></i> Edit Data Tamu</h3>
+          <button type="button" onclick="closeEdit()" class="text-slate-400 hover:text-slate-600 text-2xl leading-none px-2" aria-label="Tutup">&times;</button>
+        </div>
+        <div class="p-6 space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div><label class="set-label">Tanggal Kunjungan</label><input type="date" id="e_tgl" class="set-input"></div>
+            <div><label class="set-label">Metode Survei</label><select id="e_metode" class="set-input"><option value="Offline">Offline</option><option value="Online">Online</option></select></div>
+          </div>
+          <div><label class="set-label">Nama Orang Tua</label><input type="text" id="e_ortu" class="set-input" placeholder="Contoh: Budi atau Budi &amp; Siti"></div>
+          <div><label class="set-label">Alamat Domisili</label><textarea id="e_alamat" rows="2" class="set-input"></textarea></div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div><label class="set-label">Nomor WhatsApp / HP</label><input type="text" id="e_hp" inputmode="numeric" class="set-input" placeholder="08xxxxxxxxxx"></div>
+            <div><label class="set-label">Tujuan Berkunjung</label><select id="e_tujuan" class="set-input"></select></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div><label class="set-label">Jenjang Tujuan</label><select id="e_jenjang" onchange="onEditJenjang()" class="set-input"><option value="TK IT">TK IT</option><option value="SD IT">SD IT</option><option value="SMP IT">SMP IT</option></select></div>
+            <div id="e_sub_wrap"><label id="e_sub_label" class="set-label">Kelompok</label><select id="e_sub" class="set-input"></select></div>
+          </div>
+        </div>
+        <div class="px-6 py-4 border-t border-slate-100 flex justify-end gap-3">
+          <button type="button" onclick="closeEdit()" class="px-5 py-2.5 text-sm font-medium bg-white border border-slate-300 text-slate-600 rounded-xl hover:bg-slate-50">Batal</button>
+          <button type="button" id="btnSimpanEdit" onclick="saveEdit()" class="px-6 py-2.5 text-sm font-semibold bg-primary text-white rounded-xl hover:bg-primaryDark shadow-lg shadow-indigo-200">Simpan Perubahan</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL ALAT: TEMPAT SAMPAH / RIWAYAT / GABUNG -->
+    <div id="toolModal" class="hidden fixed inset-0 z-50 bg-slate-900/50 items-end md:items-center justify-center md:p-4 overflow-y-auto" onclick="if(event.target===this)closeTool()">
+      <div class="bg-white rounded-t-3xl md:rounded-2xl shadow-2xl w-full max-w-4xl md:my-auto max-h-[92vh] md:max-h-none overflow-y-auto md:overflow-visible">
+        <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between">
+          <h3 id="toolTitle" class="font-bold text-slate-900 flex items-center"></h3>
+          <button type="button" onclick="closeTool()" class="text-slate-400 hover:text-slate-600 text-2xl leading-none px-2" aria-label="Tutup">&times;</button>
+        </div>
+        <div id="toolBody" class="p-6 max-h-[70vh] overflow-y-auto"></div>
+      </div>
+    </div>
+
+    <div id="ptr" class="ptr" aria-hidden="true"><i data-feather="refresh-cw"></i></div>
+
+    <!-- TOAST & DIALOG KONFIRMASI -->
+    <div id="toastBox" class="fixed z-[80] top-[4.25rem] md:top-4 right-3 left-3 md:left-auto md:w-96 flex flex-col gap-2 pointer-events-none"></div>
+    <div id="confirmModal" class="hidden fixed inset-0 z-[70] bg-slate-900/50 items-center justify-center p-4" onclick="if(event.target===this)closeConfirm(false)">
+      <div class="bg-white rounded-2xl shadow-2xl w-full max-w-sm p-6" role="alertdialog" aria-modal="true" aria-labelledby="confirmMsg">
+        <p id="confirmMsg" class="text-sm text-slate-700" style="white-space:pre-line"></p>
+        <div class="flex justify-end gap-3 mt-6">
+          <button id="confirmCancel" type="button" onclick="closeConfirm(false)" class="px-5 py-2.5 text-sm font-medium bg-white border border-slate-300 text-slate-600 rounded-xl hover:bg-slate-50">Batal</button>
+          <button id="confirmOk" type="button" onclick="closeConfirm(true)" class="px-5 py-2.5 text-sm font-semibold bg-primary text-white rounded-xl hover:bg-primaryDark">OK</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script>
+    // Kelas tombol sub-tab (aktif / tidak aktif)
+    const SUBTAB_BASE = 'sub-tab flex-1 py-2.5 md:py-3 text-xs md:text-sm font-semibold rounded-xl transition-all ';
+    const SUBTAB_ON = SUBTAB_BASE + 'bg-indigo-50 text-primary';
+    const SUBTAB_OFF = SUBTAB_BASE + 'text-slate-400 hover:text-slate-600';
+
+    // Pintasan DOM
+    const $ = id => document.getElementById(id);
+
+    // ==========================================
+    // KONFIGURASI
+    // ==========================================
+    const IS_PREVIEW = false; 
+    const GAS_URL = "https://script.google.com/macros/s/AKfycbzzAkJK41T51n7Cl52tt6eSShauj5TDrBGemawTqCKC7hujv-n0yg3_wOVEOU1dLVI9/exec"; 
+    
+    let dbData = [];
+    let currentUnit = 'TK IT';
+    let currentSub = 'awal';
+    
+    // Pagination variables
+    let currentPage = 1;
+    let itemsPerPage = 10;
+    let mobileShown = 10;
+    const sortState = { awal: null, lanjut: null };
+    let filteredDataLength = 0;
+
+    document.addEventListener("DOMContentLoaded", () => {
+        feather.replace();
+        $('f_tanggal').value = new Date().toISOString().split('T')[0];
+    });
+
+    // ==========================================
+    // FUNGSI JEMBATAN KE GOOGLE SCRIPT
+    // ==========================================
+    function sendToGAS(dataObj) {
+        return fetch(GAS_URL, {
+            method: 'POST',
+            redirect: 'follow',
+            headers: {
+                'Content-Type': 'text/plain;charset=utf-8' 
+            },
+            body: JSON.stringify(dataObj)
+        }).then(res => res.json());
+    }
+
+    function switchView(view) {
+        $('viewForm').classList.add('hidden');
+        $('viewLogin').classList.add('hidden');
+        $('viewAdmin').classList.add('hidden');
+        $('viewSettings').classList.add('hidden');
+        if(view === 'login') { if (ADMIN_CRED && !IS_PREVIEW) sendToGAS({ action: 'logout', token: ADMIN_CRED.token }).catch(() => {}); ADMIN_CRED = null; dbData = []; }
+        if(view === 'form') $('viewForm').classList.remove('hidden');
+        if(view === 'login') $('viewLogin').classList.remove('hidden');
+        if(view === 'admin') {
+            $('viewAdmin').classList.remove('hidden');
+            switchUnit('TK IT'); 
+            if(!IS_PREVIEW) loadDataServer();
+            loadTahunAjaran();
+            if (!autoTimer) autoTimer = setInterval(autoRefresh, 60000);
+            restoreTableUi();
+        }
+    }
+
+    function toggleUnitOpts() {
+        const val = document.querySelector('input[name="f_jenjang"]:checked').value;
+        document.querySelectorAll('input[name="f_sub"]').forEach(r => { r.checked = false; });   // pilihan kelompok/program dikosongkan saat jenjang berganti
+        $('wrap_kelompok').classList.add('hidden');
+        $('wrap_program').classList.add('hidden');
+        if(val === 'TK IT') $('wrap_kelompok').classList.remove('hidden');
+        if(val === 'SMP IT') $('wrap_program').classList.remove('hidden');
+    }
+
+    // FORM PUBLIK
+    let formOpenedAt = Date.now();
+    const ERR_MAP = { f_tanggal: 'err_tgl', f_ayah: 'err_ortu', f_ibu: 'err_ortu', f_alamat: 'err_alamat', f_hp: 'err_hp', f_jenjang: 'err_jenjang', f_sub: 'err_sub' };
+
+    // Format nomor HP otomatis: 62812... / +62 812... -> 0812-xxxx-xxxx
+    function formatHpInput(el) {
+        let d = el.value.replace(/\D/g, '');
+        if (d.indexOf('62') === 0) d = '0' + d.slice(2);
+        d = d.slice(0, 13);
+        el.value = d.replace(/(\d{4})(?=\d)/g, '$1-');
+    }
+    function clearFormErrors() {
+        document.querySelectorAll('#ppdbForm .f-err').forEach(el => { el.classList.remove('show'); el.innerText = ''; });
+        document.querySelectorAll('#ppdbForm .f-invalid').forEach(el => el.classList.remove('f-invalid'));
+    }
+    ['input', 'change'].forEach(ev => $('ppdbForm').addEventListener(ev, e => {
+        const t = e.target, key = t.name || t.id, err = ERR_MAP[key];
+        t.classList.remove('f-invalid');
+        if (key === 'f_ayah' || key === 'f_ibu') { $('f_ayah').classList.remove('f-invalid'); $('f_ibu').classList.remove('f-invalid'); }
+        if (err) { $(err).classList.remove('show'); }
+    }));
+
+    // Validasi di sisi klien dengan pesan di bawah tiap kolom; mengembalikan payload atau null
+    function validateForm() {
+        clearFormErrors();
+        let firstErr = null, firstFocus = null;
+        const bad = (errId, msg, ids) => {
+            const el = $(errId); el.innerText = msg; el.classList.add('show');
+            if (!firstErr) firstErr = el;
+            (ids || []).forEach(id => { $(id).classList.add('f-invalid'); if (!firstFocus) firstFocus = $(id); });
+        };
+        const tgl = $('f_tanggal').value;
+        const ayah = $('f_ayah').value.trim(), ibu = $('f_ibu').value.trim();
+        const alamat = $('f_alamat').value.trim();
+        const hp = $('f_hp').value.replace(/\D/g, '');
+        const jr = document.querySelector('input[name="f_jenjang"]:checked');
+        const sr = document.querySelector('input[name="f_sub"]:checked');
+        if (!tgl) bad('err_tgl', 'Tanggal kunjungan wajib diisi.', ['f_tanggal']);
+        if (!ayah && !ibu) bad('err_ortu', 'Isi Nama Ayah atau Nama Ibu (salah satu wajib diisi).', ['f_ayah', 'f_ibu']);
+        if (!alamat) bad('err_alamat', 'Alamat wajib diisi.', ['f_alamat']);
+        if (hp.length < 8 || hp.length > 15) bad('err_hp', 'Nomor HP tidak valid (8 sampai 15 digit).', ['f_hp']);
+        if (!jr) bad('err_jenjang', 'Pilih jenjang tujuan.');
+        else if (jr.value !== 'SD IT' && !sr) bad('err_sub', jr.value === 'TK IT' ? 'Pilih kelompok.' : 'Pilih program.');
+        if (firstErr) {
+            if (firstFocus) firstFocus.focus(); else firstErr.scrollIntoView({ block: 'center', behavior: 'smooth' });
+            return null;
+        }
+        return {
+            tgl: tgl, ortu: [ayah, ibu].filter(Boolean).join(' & '),   // tanda "&" hanya jika keduanya diisi
+            siswa: '-', jk: '-', usia: '-', alamat: alamat, hp: hp, tujuan: $('f_tujuan').value,
+            jenjang: jr.value, sub: jr.value === 'SD IT' ? '-' : sr.value, metode: $('f_metode').value
+        };
+    }
+
+    function showFormSuccess(p) {
+        const tgl = p.tgl.split('-').reverse().join('/');
+        $('successSummary').innerText = p.jenjang + (p.sub && p.sub !== '-' ? ' · ' + p.sub : '') + ' · ' + tgl;
+        $('ppdbForm').reset();
+        $('f_tanggal').value = new Date().toISOString().split('T')[0];
+        $('wrap_kelompok').classList.add('hidden'); $('wrap_program').classList.add('hidden');
+        clearFormErrors();
+        $('ppdbForm').classList.add('hidden'); $('formSuccess').classList.remove('hidden');
+        feather.replace();
+        $('viewForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    function showFormAgain() {
+        $('formSuccess').classList.add('hidden'); $('ppdbForm').classList.remove('hidden');
+        formOpenedAt = Date.now();
+        $('f_ayah').focus();
+    }
+
+    function submitForm(e) {
+        e.preventDefault();
+        const payload = validateForm();
+        if (!payload) return;
+
+        const btn = $('btnSubmit');
+        btn.innerHTML = `<i data-feather="loader" class="w-5 h-5 mr-2 animate-spin"></i> Memproses...`;
+        feather.replace();
+        btn.disabled = true;
+
+        const resetBtn = () => {
+            btn.innerHTML = `<i data-feather="send" class="w-5 h-5 mr-2"></i> Kirim Buku Tamu`;
+            btn.disabled = false;
+            feather.replace();
+        };
+        const kirim = (force) => {
+            sendToGAS({ action: 'submitForm', payload: Object.assign({ website: $('f_website').value }, payload), force: force, elapsed: Date.now() - formOpenedAt })
+            .then(data => {
+                if(data.success && data.duplicate) {
+                    // Nomor HP sudah pernah tercatat: minta konfirmasi sebelum tetap mengirim
+                    confirmDialog(data.message, { ok: 'Tetap Kirim', cancel: 'Batal' }).then(ok => { if (ok) kirim(true); else resetBtn(); });
+                } else if(data.success) {
+                    showFormSuccess(payload); resetBtn();
+                } else { toast('Gagal: ' + data.error); resetBtn(); }
+            }).catch(err => {
+                toast("Gangguan jaringan! Pastikan Web App GAS di-deploy sebagai 'Versi Baru'.");
+                resetBtn();
+            });
+        };
+        if(!IS_PREVIEW) kirim(false); else { showFormSuccess(payload); resetBtn(); }
+    }
+
+    // LOGIN
+    function doLogin(e) {
+        e.preventDefault();
+        const u = $('l_user').value;
+        const p = $('l_pass').value;
+        const btn = $('btnLogin');
+        btn.innerText = "Memuat...";
+        
+        if(!IS_PREVIEW) {
+            sendToGAS({ action: 'verifyLogin', user: u, pass: p })
+            .then(data => {
+                if(data.success && data.status === 'SUCCESS' && data.token) { ADMIN_CRED = { user: u, token: data.token }; $('l_pass').value = ''; switchView('admin'); }
+                else toast(data.success === false && data.error ? data.error : "Username atau Password salah!");
+                btn.innerText = "Masuk";
+            }).catch(err => {
+                toast("Error saat login. Cek URL GAS.");
+                btn.innerText = "Masuk";
+            });
+        }
+    }
+
+    // LOAD DATA DASHBOARD
+    function loadDataServer() {
+        $('dashTitle').innerText = "Memuat data...";
+        api({ action: 'getAllData' })
+        .then(data => {
+            if(data.success) { dbData = data.data; setLastSync(); switchUnit(currentUnit); }
+            else { $('dashTitle').innerText = "Gagal memuat data"; if (ADMIN_CRED) toast('Gagal memuat data: ' + data.error); }
+        }).catch(err => {
+            $('dashTitle').innerText = "Gagal memuat data";
+            toast('Gangguan jaringan saat memuat data.');
+        });
+    }
+
+    function switchUnit(unit) {
+        currentUnit = unit;
+        currentPage = 1; mobileShown = itemsPerPage;
+        $('dashTitle').innerText = "Dashboard " + unit;
+        document.querySelectorAll('.nav-item').forEach(el => {
+            el.classList.remove('active');
+        });
+        $('nav_'+unit).classList.add('active');
+        renderDashboard();
+    }
+
+    function switchSubTab(sub) {
+        currentSub = sub;
+        currentPage = 1; mobileShown = itemsPerPage;
+        const tAwal = $('tab_awal');
+        const tLanjut = $('tab_lanjut');
+        if(sub === 'awal') {
+            tAwal.className = SUBTAB_ON;
+            tLanjut.className = SUBTAB_OFF;
+        } else {
+            tLanjut.className = SUBTAB_ON;
+            tAwal.className = SUBTAB_OFF;
+        }
+        renderDashboard();
+    }
+
+    function changePage(delta) {
+        const totalPages = Math.ceil(filteredDataLength / itemsPerPage) || 1;
+        currentPage += delta;
+        if(currentPage < 1) currentPage = 1;
+        if(currentPage > totalPages) currentPage = totalPages;
+        renderDashboard();
+    }
+
+    // UPDATE DATA
+    function updateData(id, type, val) {
+        let idx = dbData.findIndex(d => d.id === id);
+        if(idx !== -1) {
+            if(type === 'ket') {
+                dbData[idx].ket = val;
+            } else if(type === 'gel') { dbData[idx].gel = val; }
+            else if(type === 'siswa') { dbData[idx].siswa = val; }
+            else if(type === 'jk') { dbData[idx].jk = val; }
+            else if(type === 'usia') { dbData[idx].usia = val; }
+            else if(type === 'ts_lanjut') { dbData[idx].ts_lanjut = val; }
+            else if(type === 'nopend') { dbData[idx].nopend = val; }
+        }
+        
+        if (['siswa', 'usia', 'nopend', 'ts_lanjut'].indexOf(type) !== -1) scheduleRender(); else renderDashboard();
+
+        if(!IS_PREVIEW) {
+            trackSave({ id: id, type: type, val: val });
+        }
+    }
+
+    // ==========================================
+    // TAMPILAN HP: KARTU DATA & FILTER RINGKAS
+    // ==========================================
+    function mField(label, html) { return '<div class="m-field"><label>' + label + '</label>' + html + '</div>'; }
+
+    function waNumber(hp) {
+        const d = String(hp || '').replace(/\D/g, '');
+        return d.indexOf('62') === 0 ? d : '62' + d.replace(/^0/, '');
+    }
+    function waButton(hp) {
+        return '<a href="https://wa.me/' + waNumber(hp) + '" target="_blank" rel="noopener" class="m-wa" aria-label="Chat WhatsApp"><i data-feather="message-circle"></i>WA</a>';
+    }
+    function dupBadgeHtml(row) {
+        const dl = hpDupList(row);
+        return dl ? '<span class="ml-2 inline-flex items-center px-1.5 py-0.5 rounded-md bg-amber-100 text-amber-700 text-[10px] font-semibold" title="' +
+            escSet('No. HP sama dengan: ' + dl.filter(x => x.id !== row.id).map(x => formatWIBDate(x.tgl) + ' (' + x.jenjang + ')').join(', ')) + '">Ganda ×' + dl.length + '</span>' : '';
+    }
+    function closeSwipes() { document.querySelectorAll('.m-swipe.open').forEach(o => o.classList.remove('open')); }
+
+    // Kartu Data Tamu (handler sama dengan tabel); dapat digeser ke kiri untuk Edit / Hapus
+    function cardAwal(row, dupBadge) {
+        const st = row.ket === 'Lanjut' ? ' m-st-lanjut' : (row.ket === 'Tidak' ? ' m-st-tidak' : '');
+        const hp = String(row.hp || '');
+        const subChip = (row.sub && row.sub !== '-') ? '<span class="m-chip alt">' + escSet(row.sub) + '</span>' : '';
+        const opt = (v, t) => '<option value="' + v + '"' + (row.ket === v ? ' selected' : '') + '>' + t + '</option>';
+        return '<div class="m-swipe" data-id="' + row.id + '">' +
+            '<div class="m-under"><button type="button" class="u-edit" onclick="closeSwipes();openEdit(\'' + row.id + '\')" aria-label="Edit data"><i data-feather="edit-2"></i>Edit</button>' +
+            '<button type="button" class="u-del" onclick="closeSwipes();deleteTamuUI(\'' + row.id + '\')" aria-label="Hapus data"><i data-feather="trash-2"></i>Hapus</button></div>' +
+            '<article class="m-card">' +
+            '<div class="m-head"><div class="m-title">' + escSet(row.ortu) + '</div><span class="m-date">' + formatWIBDate(row.tgl) + '</span></div>' +
+            '<div class="m-line"><i data-feather="phone" class="m-ic"></i><a href="tel:' + escSet(hp) + '" class="m-tel">' + escSet(hp) + '</a>' + dupBadge + waButton(hp) + '</div>' +
+            '<p class="m-addr">' + escSet(row.alamat) + '</p>' +
+            '<div class="m-chips"><span class="m-chip">' + escSet(row.metode) + '</span>' + subChip + '</div>' +
+            '<div class="m-foot"><select onchange="updateData(\'' + row.id + '\', \'ket\', this.value)" class="table-input cursor-pointer' + st + '">' +
+                opt('Belum', 'Belum') + opt('Lanjut', 'Lanjut (Mendaftar)') + opt('Tidak', 'Tidak') + '</select>' +
+            '</div></article></div>';
+    }
+
+    // Kartu Data Lanjut Mendaftar (isian & handler sama dengan tabel)
+    function cardLanjut(row) {
+        const id = row.id, dupSw = !!swDupList(row);
+        const tglVal = row.ts_lanjut ? row.ts_lanjut.substring(0, 10) : '';
+        const blur = k => ' onblur="updateData(\'' + id + '\', \'' + k + '\', this.value)"';
+        const inNoPend = '<input type="text" placeholder="No..." value="' + escSet(row.nopend || '') + '"' + blur('nopend') + ' class="table-input">';
+        const inTgl = '<input type="date" value="' + tglVal + '"' + blur('ts_lanjut') + ' class="table-input">';
+        const inSiswa = '<input type="text" placeholder="Nama..." value="' + escSet(row.siswa === '-' ? '' : row.siswa) + '"' + blur('siswa') + ' class="table-input' + (dupSw ? ' is-dup' : '') + '"' + (dupSw ? ' title="Nama siswa ini muncul lebih dari satu kali di jenjang ini"' : '') + '>';
+        const inUsia = '<input type="text" placeholder="0 thn" value="' + escSet(row.usia === '-' ? '' : row.usia) + '"' + blur('usia') + ' class="table-input">';
+        const o = (cur, v, t) => '<option value="' + v + '"' + (cur === v ? ' selected' : '') + '>' + t + '</option>';
+        const jk = '<select onchange="updateData(\'' + id + '\', \'jk\', this.value)" class="table-input cursor-pointer">' + o(row.jk, '-', 'Pilih') + o(row.jk, 'Laki-laki', 'Laki-laki') + o(row.jk, 'Perempuan', 'Perempuan') + '</select>';
+        const gel = '<select onchange="updateData(\'' + id + '\', \'gel\', this.value)" class="table-input cursor-pointer !text-primary">' + o(row.gel, '', 'Pilih') + o(row.gel, 'Gel 1', 'Gelombang 1') + o(row.gel, 'Gel 2', 'Gelombang 2') + '</select>';
+        const subChip = (row.sub && row.sub !== '-') ? '<span class="m-chip alt">' + escSet(row.sub) + '</span>' : '';
+        return '<article class="m-card">' +
+            '<div class="m-head"><div class="m-title">' + escSet(row.ortu) + '</div><div class="flex items-center gap-2">' + subChip + waButton(row.hp) + '</div></div>' +
+            '<p class="m-addr">' + escSet(row.alamat) + '</p>' +
+            '<div class="m-grid">' + mField('No. Pendaftaran', inNoPend) + mField('Gelombang', gel) + '</div>' +
+            '<div class="m-grid one">' + mField('Nama Siswa', inSiswa) + '</div>' +
+            '<div class="m-grid">' + mField('Gender', jk) + mField('Usia', inUsia) + '</div>' +
+            '<div class="m-grid one">' + mField('Tanggal', inTgl) + '</div>' +
+            '</article>';
+    }
+
+    function moreMobile() { mobileShown += 10; renderDashboard(); }
+
+    // Geser kartu (Data Tamu) & tarik-untuk-muat-ulang
+    (function initTouch() {
+        const list = $('mobileList'); let sw = null;
+        list.addEventListener('touchstart', e => {
+            const el = e.target.closest('.m-swipe');
+            if (!el || e.target.closest('input, select, textarea, a, button')) { sw = null; return; }
+            document.querySelectorAll('.m-swipe.open').forEach(o => { if (o !== el) o.classList.remove('open'); });
+            const t = e.touches[0];
+            sw = { el: el, x: t.clientX, y: t.clientY, dx: 0, dir: null, open: el.classList.contains('open') };
+        }, { passive: true });
+        list.addEventListener('touchmove', e => {
+            if (!sw) return;
+            const t = e.touches[0], dx = t.clientX - sw.x, dy = t.clientY - sw.y;
+            if (!sw.dir) {
+                if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+                sw.dir = Math.abs(dx) > Math.abs(dy) ? 'h' : 'v';
+                if (sw.dir === 'h') sw.el.classList.add('dragging');
+            }
+            if (sw.dir !== 'h') return;
+            sw.dx = Math.max(-128, Math.min(0, (sw.open ? -128 : 0) + dx));
+            sw.el.querySelector('.m-card').style.transform = 'translateX(' + sw.dx + 'px)';
+        }, { passive: true });
+        list.addEventListener('touchend', () => {
+            if (!sw) return;
+            const el = sw.el;
+            el.classList.remove('dragging');
+            if (sw.dir === 'h') { el.querySelector('.m-card').style.transform = ''; el.classList.toggle('open', sw.dx < -56); }
+            sw = null;
+        });
+        document.addEventListener('touchstart', e => { if (!e.target.closest('.m-swipe')) closeSwipes(); }, { passive: true });
+
+        const sc = document.querySelector('.blogger-wrapper'), ind = $('ptr');
+        let y0 = null, x0 = 0, dy = 0;
+        const canPull = () => window.innerWidth < 768 && !$('viewAdmin').classList.contains('hidden') && sc.scrollTop <= 0 &&
+            ['editModal', 'toolModal', 'confirmModal'].every(id => $(id).classList.contains('hidden'));
+        sc.addEventListener('touchstart', e => {
+            if (canPull() && !e.target.closest('.m-swipe')) { y0 = e.touches[0].clientY; x0 = e.touches[0].clientX; dy = 0; } else y0 = null;
+        }, { passive: true });
+        sc.addEventListener('touchmove', e => {
+            if (y0 === null) return;
+            dy = e.touches[0].clientY - y0;
+            if (dy <= 0 || Math.abs(e.touches[0].clientX - x0) > dy) { ind.classList.remove('pulling'); return; }
+            ind.classList.add('pulling');
+            ind.style.transform = 'translateY(' + (Math.min(dy * 0.5, 70) - 50) + 'px) rotate(' + (dy * 2) + 'deg)';
+        }, { passive: true });
+        sc.addEventListener('touchend', () => {
+            if (y0 === null) return;
+            const go = dy > 110; y0 = null;
+            ind.classList.remove('pulling');
+            if (go) {
+                ind.classList.add('loading'); ind.style.transform = 'translateY(14px)'; ind.style.opacity = 1;
+                refreshData(false).finally(() => { ind.classList.remove('loading'); ind.style.transform = ''; ind.style.opacity = ''; });
+            } else ind.style.transform = '';
+        });
+    })();
+
+    function toggleFilter() {
+        const open = $('fltExtra').classList.toggle('open');
+        const b = $('btnFltToggle'); b.classList.toggle('on', open); b.setAttribute('aria-expanded', open);
+    }
+
+    // Render ulang ditunda saat admin masih mengetik di kolom isian, agar fokus & keyboard HP tidak hilang
+    let renderTimer = null;
+    function scheduleRender() {
+        clearTimeout(renderTimer);
+        renderTimer = setTimeout(function tick() {
+            const ae = document.activeElement;
+            if (ae && /^(INPUT|SELECT|TEXTAREA)$/.test(ae.tagName) && ae.closest('#tableBody, #mobileList')) { renderTimer = setTimeout(tick, 400); return; }
+            renderDashboard();
+        }, 150);
+    }
+
+    // ==========================================
+    // API, SESI, TOAST, KONFIRMASI & AKSESIBILITAS POP-UP
+    // ==========================================
+    const SESSION_RE = /login|sesi|akses ditolak/i;
+    function api(payload) {
+        const body = ADMIN_CRED ? Object.assign({ token: ADMIN_CRED.token }, payload) : payload;
+        return sendToGAS(body).then(r => { if (r && r.success === false && SESSION_RE.test(r.error || '')) sessionExpired(); return r; });
+    }
+    function sessionExpired() {
+        if (!ADMIN_CRED) return;
+        toast('Sesi berakhir. Silakan login ulang.');
+        switchView('login');
+    }
+
+    function toast(msg, type) {
+        type = type || (/gagal|gangguan|belum tersimpan|tidak valid|wajib|tidak bisa|ditolak|berakhir|salah|terlalu|error|tidak sama|minimal/i.test(msg) ? 'error'
+            : (/berhasil|tersimpan|dibuat|dipulihkan|dipindahkan|diperbarui|diubah|terima kasih|siap diunduh|digabung/i.test(msg) ? 'success' : 'info'));
+        const el = document.createElement('div');
+        el.className = 'toast toast-' + type; el.setAttribute('role', type === 'error' ? 'alert' : 'status'); el.innerText = msg;
+        const close = () => { el.classList.remove('show'); setTimeout(() => el.remove(), 300); };
+        el.onclick = close;
+        $('toastBox').appendChild(el);
+        setTimeout(() => el.classList.add('show'), 10);
+        setTimeout(close, type === 'error' ? 6500 : 3500);
+    }
+
+    let confirmResolve = null;
+    function confirmDialog(message, opts) {
+        opts = opts || {};
+        return new Promise(resolve => {
+            if (confirmResolve) confirmResolve(false);
+            confirmResolve = resolve;
+            $('confirmMsg').innerText = message;
+            const ok = $('confirmOk'); ok.innerText = opts.ok || 'OK';
+            ok.className = 'px-5 py-2.5 text-sm font-semibold text-white rounded-xl ' + (opts.danger ? 'bg-rose-600 hover:bg-rose-700' : 'bg-primary hover:bg-primaryDark');
+            $('confirmCancel').innerText = opts.cancel || 'Batal';
+            const m = $('confirmModal'); m.classList.remove('hidden'); m.classList.add('flex');
+            a11yOpen(m);
+        });
+    }
+    function closeConfirm(val) {
+        const m = $('confirmModal');
+        if (m.classList.contains('hidden')) return;
+        m.classList.add('hidden'); m.classList.remove('flex');
+        const r = confirmResolve; confirmResolve = null;
+        a11yClose();
+        if (r) r(val);
+    }
+
+    const focusStack = [];
+    function a11yOpen(el) {
+        focusStack.push(document.activeElement);
+        setTimeout(() => {
+            const f = el.querySelector('input:not([type=hidden]):not([disabled]), select:not([disabled]), textarea:not([disabled])') || el.querySelector('button:not([disabled])');
+            if (f) f.focus();
+        }, 40);
+    }
+    function a11yClose() {
+        const f = focusStack.pop();
+        if (f && f.focus && document.contains(f)) { try { f.focus(); } catch (e) {} }
+    }
+    document.addEventListener('keydown', function (e) {
+        const isOpen = id => !$(id).classList.contains('hidden');
+        if (e.key === 'Escape') {
+            if (isOpen('confirmModal')) closeConfirm(false);
+            else if (isOpen('editModal')) closeEdit();
+            else if (isOpen('toolModal')) closeTool();
+            return;
+        }
+        if (e.key === 'Tab') {
+            const el = ['confirmModal', 'editModal', 'toolModal'].map(id => $(id)).find(m => !m.classList.contains('hidden'));
+            if (!el) return;
+            const f = [].slice.call(el.querySelectorAll('a[href], button:not([disabled]), input:not([type=hidden]):not([disabled]), select:not([disabled]), textarea:not([disabled])')).filter(x => x.offsetParent !== null);
+            if (!f.length) return;
+            if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
+            else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
+        }
+    });
+
+    // ==========================================
+    // PENYIMPANAN TERPANTAU & PENYEGARAN DATA
+    // ==========================================
+    const saveState = { pending: 0, failed: [], justSaved: false, okTimer: null };
+    function setSaveChip() {
+        const el = $('saveChip');
+        if (saveState.failed.length) {
+            el.className = 'save-chip err';
+            el.innerHTML = saveState.failed.length + ' perubahan belum tersimpan · <button type="button" onclick="retrySaves()" class="underline font-semibold">Coba lagi</button>';
+        } else if (saveState.pending) { el.className = 'save-chip busy'; el.innerText = 'Menyimpan…'; }
+        else if (saveState.justSaved) { el.className = 'save-chip ok'; el.innerText = 'Tersimpan ✓'; }
+        else { el.className = 'save-chip hidden'; el.innerText = ''; }
+    }
+    function trackSave(p) {
+        saveState.pending++; setSaveChip();
+        const fail = (msg) => {
+            saveState.failed = saveState.failed.filter(x => !(x.id === p.id && x.type === p.type));
+            saveState.failed.push(p); setSaveChip(); toast(msg);
+        };
+        return api(Object.assign({ action: 'updateRow' }, p)).then(r => {
+            saveState.pending--;
+            if (r && r.success) {
+                saveState.justSaved = true; clearTimeout(saveState.okTimer);
+                saveState.okTimer = setTimeout(() => { saveState.justSaved = false; setSaveChip(); }, 2500);
+                setSaveChip();
+            } else fail('Perubahan belum tersimpan: ' + ((r && r.error) || ''));
+        }).catch(() => { saveState.pending--; fail('Gangguan jaringan! Perubahan belum tersimpan.'); });
+    }
+    function retrySaves() { const list = saveState.failed.splice(0); setSaveChip(); list.forEach(trackSave); }
+    window.addEventListener('beforeunload', e => { if (saveState.pending || saveState.failed.length) { e.preventDefault(); e.returnValue = ''; } });
+
+    let lastSyncAt = null, refreshing = false, autoTimer = null;
+    function setLastSync() {
+        lastSyncAt = new Date();
+        $('lastSync').innerText = 'Diperbarui ' + lastSyncAt.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Jakarta' }).replace('.', ':');
+    }
+    function refreshData(quiet) {
+        if (refreshing || IS_PREVIEW || !ADMIN_CRED) return Promise.resolve();
+        refreshing = true; $('btnRefresh').classList.add('spin');
+        return api({ action: 'getAllData' }).then(r => {
+            if (r.success) { dbData = r.data; setLastSync(); renderDashboard(); if (!quiet) toast('Data diperbarui.'); }
+            else if (!quiet && ADMIN_CRED) toast('Gagal memuat data: ' + r.error);
+        }).catch(() => { if (!quiet) toast('Gangguan jaringan saat memuat data.'); })
+        .finally(() => { refreshing = false; $('btnRefresh').classList.remove('spin'); });
+    }
+    function refreshNow() { return refreshData(false); }
+    function userIsEditing() {
+        const ae = document.activeElement;
+        return !!(ae && /^(INPUT|SELECT|TEXTAREA)$/.test(ae.tagName) && ae.closest('#tableBody, #mobileList'));
+    }
+    function autoRefresh() {   // penyegaran senyap tiap 60 detik, tidak mengganggu saat mengedit
+        if (document.hidden || $('viewAdmin').classList.contains('hidden')) return;
+        if (saveState.pending || saveState.failed.length || userIsEditing()) return;
+        if (['editModal', 'toolModal', 'confirmModal'].some(id => !$(id).classList.contains('hidden'))) return;
+        refreshData(true);
+    }
+
+    function ubahPassword() {
+        if (previewBlock()) return;
+        const o = $('p_pw_old').value, n = $('p_pw_new').value, n2 = $('p_pw_new2').value;
+        if (!o || !n) { toast('Isi password lama dan password baru.'); return; }
+        if (n.length < 8) { toast('Password baru minimal 8 karakter.'); return; }
+        if (n !== n2) { toast('Konfirmasi password baru tidak sama.'); return; }
+        const btn = $('btnPw'); btn.disabled = true;
+        adminCall({ action: 'changePassword', oldPass: o, newPass: n })
+            .then(() => { ['p_pw_old', 'p_pw_new', 'p_pw_new2'].forEach(id => { $(id).value = ''; }); toast('Password berhasil diubah.'); })
+            .catch(failAlert)
+            .finally(() => { btn.disabled = false; });
+    }
+
+    // ==========================================
+    // TABEL: URUT KOLOM, JUMLAH BARIS, KEPADATAN, SIDEBAR
+    // ==========================================
+    const SORT_MAP = {
+        awal: { 'tanggal': 'tgl', 'nama ortu': 'ortu', 'metode survei': 'metode', 'kelompok': 'sub', 'program': 'sub', 'keterangan': 'ket' },
+        lanjut: { 'no. pendaftaran': 'nopend', 'tanggal': 'ts_lanjut', 'nama ortu': 'ortu', 'nama siswa': 'siswa', 'gender': 'jk', 'usia': 'usia', 'alamat': 'alamat', 'kelompok': 'sub', 'program': 'sub', 'gelombang': 'gel' }
+    };
+    function sortVal(row, key) {
+        if (key === 'tgl' || key === 'ts_lanjut') return dateKey(row[key]);
+        const v = row[key];
+        return (v == null || v === '-') ? '' : String(v);
+    }
+    function applySort(list, mode) {
+        const st = sortState[mode];
+        if (!st) return list;
+        const dir = st.dir === 'desc' ? -1 : 1;
+        return list.slice().sort((a, b) => {
+            const x = sortVal(a, st.key), y = sortVal(b, st.key);
+            if (x === '' && y === '') return 0;
+            if (x === '') return 1;           // data kosong selalu di bawah
+            if (y === '') return -1;
+            if (st.key === 'usia') { const nx = parseFloat(x), ny = parseFloat(y); if (!isNaN(nx) && !isNaN(ny) && nx !== ny) return (nx - ny) * dir; }
+            return x.localeCompare(y, 'id', { numeric: true, sensitivity: 'base' }) * dir;
+        });
+    }
+    function decorateSortHeaders(mode) {
+        const st = sortState[mode];
+        document.querySelectorAll('#tableHead th').forEach(th => {
+            const key = SORT_MAP[mode][th.textContent.trim().toLowerCase()];
+            if (!key) return;
+            const on = !!(st && st.key === key);
+            th.classList.add('sortable');
+            th.setAttribute('onclick', "sortBy('" + key + "')");
+            th.setAttribute('title', 'Klik untuk mengurutkan');
+            th.setAttribute('aria-sort', on ? (st.dir === 'asc' ? 'ascending' : 'descending') : 'none');
+            th.insertAdjacentHTML('beforeend', '<span class="sort-ar' + (on ? ' on' : '') + '">' + (on ? (st.dir === 'asc' ? '▲' : '▼') : '⇅') + '</span>');
+        });
+    }
+    function sortBy(key) {   // klik 1: naik, klik 2: turun, klik 3: kembali ke bawaan
+        const st = sortState[currentSub];
+        sortState[currentSub] = (!st || st.key !== key) ? { key: key, dir: 'asc' } : (st.dir === 'asc' ? { key: key, dir: 'desc' } : null);
+        currentPage = 1; mobileShown = itemsPerPage;
+        renderDashboard();
+    }
+    function onSortSelect(v) {   // pilihan urutan di HP
+        if (!v) sortState[currentSub] = null;
+        else {
+            const parts = v.split('_');
+            const key = parts[0] === 'tgl' ? (currentSub === 'awal' ? 'tgl' : 'ts_lanjut') : (currentSub === 'awal' ? 'ortu' : 'siswa');
+            sortState[currentSub] = { key: key, dir: parts[1] };
+        }
+        currentPage = 1; mobileShown = itemsPerPage;
+        renderDashboard();
+    }
+    function syncSortSelect() {
+        const st = sortState[currentSub];
+        let v = '';
+        if (st) {
+            if (st.key === (currentSub === 'awal' ? 'tgl' : 'ts_lanjut')) v = 'tgl_' + st.dir;
+            else if (st.key === (currentSub === 'awal' ? 'ortu' : 'siswa')) v = 'nama_' + st.dir;
+        }
+        $('flt_sort').value = v;
+    }
+    function setPageSize(v) {
+        itemsPerPage = parseInt(v, 10) || 10;
+        currentPage = 1; mobileShown = itemsPerPage;
+        renderDashboard();
+    }
+    function toggleDense() {
+        const d = $('dataTable').classList.toggle('dense');
+        $('btnDense').classList.toggle('on', d);
+        try { localStorage.setItem('tblDense', d ? '1' : '0'); } catch (e) {}
+    }
+    function toggleSidebar() {
+        const c = $('sideBar').classList.toggle('collapsed');
+        $('btnSide').title = c ? 'Perluas menu' : 'Ciutkan menu';
+        try { localStorage.setItem('sbCollapsed', c ? '1' : '0'); } catch (e) {}
+    }
+    function restoreTableUi() {   // ingat pilihan kepadatan & sidebar
+        try {
+            if (localStorage.getItem('sbCollapsed') === '1') $('sideBar').classList.add('collapsed');
+            if (localStorage.getItem('tblDense') === '1') { $('dataTable').classList.add('dense'); $('btnDense').classList.add('on'); }
+        } catch (e) {}
+    }
+
+    // ==========================================
+    // PENCARIAN, FILTER & DETEKSI DATA GANDA
+    // ==========================================
+    const filt = { q: '', from: '', to: '', metode: '', ket: '', gel: '', dup: false };
+    let DUP = { hp: {}, sw: {} };
+    let fltTimer = null;
+
+    function normText(s) { return String(s == null ? '' : s).toLowerCase().replace(/\s+/g, ' ').trim(); }
+    function normHp(s) {
+        let d = String(s == null ? '' : s).replace(/\D/g, '');
+        if (d.indexOf('62') === 0) d = '0' + d.slice(2);
+        else if (d && d.charAt(0) !== '0') d = '0' + d;
+        return d;
+    }
+    function dateKey(v) { // yyyy-MM-dd (WIB)
+        if (!v) return '';
+        if (/^\d{4}-\d{2}-\d{2}$/.test(v)) return v;
+        const d = new Date(v);
+        return isNaN(d) ? '' : d.toLocaleDateString('en-CA', { timeZone: 'Asia/Jakarta' });
+    }
+
+    function buildDup() {
+        const hp = {}, sw = {};
+        dbData.forEach(d => {
+            const k = normHp(d.hp);
+            if (k) (hp[k] = hp[k] || []).push(d);
+            const n = normText(d.siswa);
+            if (d.ket === 'Lanjut' && n && n !== '-') (sw[n + '|' + d.jenjang] = sw[n + '|' + d.jenjang] || []).push(d);
+        });
+        return { hp: hp, sw: sw };
+    }
+    function hpDupList(d) { const l = DUP.hp[normHp(d.hp)]; return l && l.length > 1 ? l : null; }
+    function swDupList(d) {
+        const n = normText(d.siswa);
+        const l = (d.ket === 'Lanjut' && n && n !== '-') ? DUP.sw[n + '|' + d.jenjang] : null;
+        return l && l.length > 1 ? l : null;
+    }
+
+    function onFilterInput() { clearTimeout(fltTimer); fltTimer = setTimeout(onFilterChange, 200); }
+    function onFilterChange() {
+        filt.q = $('flt_q').value; filt.from = $('flt_from').value; filt.to = $('flt_to').value;
+        filt.metode = $('flt_metode').value; filt.ket = $('flt_ket').value; filt.gel = $('flt_gel').value;
+        filt.dup = $('flt_dup').checked;
+        currentPage = 1; mobileShown = itemsPerPage;
+        renderDashboard();
+    }
+    function resetFilter() {
+        ['flt_q', 'flt_from', 'flt_to', 'flt_metode', 'flt_ket', 'flt_gel'].forEach(id => { $(id).value = ''; });
+        $('flt_dup').checked = false;
+        onFilterChange();
+    }
+    function syncFilterBar() {
+        document.querySelectorAll('.f-awal').forEach(el => el.classList.toggle('hidden', currentSub !== 'awal'));
+        document.querySelectorAll('.f-lanjut').forEach(el => el.classList.toggle('hidden', currentSub !== 'lanjut'));
+        // Lencana jumlah filter aktif pada tombol Filter (HP)
+        const n = (filt.from ? 1 : 0) + (filt.to ? 1 : 0) + (filt.dup ? 1 : 0) + (currentSub === 'awal' ? (filt.metode ? 1 : 0) + (filt.ket ? 1 : 0) : (filt.gel ? 1 : 0));
+        const b = $('fltBadge'); b.innerText = n; b.classList.toggle('hidden', !n);
+        $('btnFltReset').classList.toggle('dim', !(n > 0 || normText(filt.q)));  // Reset redup jika tidak ada filter aktif
+    }
+
+    function applyFilters(list, mode) {
+        const q = normText(filt.q);
+        const qd = filt.q.replace(/\D/g, '');
+        const qn = qd.indexOf('62') === 0 ? '0' + qd.slice(2) : qd;
+        const numeric = /^[\d\s+\-()]+$/.test(filt.q.trim()) && qd.length >= 3;
+        const active = !!(q || filt.from || filt.to || filt.dup || (mode === 'awal' ? (filt.metode || filt.ket) : filt.gel));
+        const out = list.filter(d => {
+            if (q) {
+                const hay = normText([d.ortu, d.siswa === '-' ? '' : d.siswa, d.alamat, d.hp, d.nopend].join(' '));
+                if (hay.indexOf(q) === -1 && !(numeric && normHp(d.hp).indexOf(qn) !== -1)) return false;
+            }
+            if (filt.from || filt.to) {
+                const k = dateKey(mode === 'awal' ? d.tgl : d.ts_lanjut);
+                if (!k || (filt.from && k < filt.from) || (filt.to && k > filt.to)) return false;
+            }
+            if (mode === 'awal') {
+                if (filt.metode && String(d.metode).indexOf(filt.metode) === -1) return false;
+                if (filt.ket && d.ket !== filt.ket) return false;
+            } else if (filt.gel && d.gel !== filt.gel) return false;
+            if (filt.dup && !(mode === 'awal' ? hpDupList(d) : swDupList(d))) return false;
+            return true;
+        });
+        $('filterInfo').innerText = active ? 'Menampilkan ' + out.length + ' dari ' + list.length + ' data' : '';
+        return out;
+    }
+
+    // ==========================================
+    // EDIT DATA TAMU (ADMIN)
+    // ==========================================
+    const SUB_OPTS = { 'TK IT': ['Kelompok A', 'Kelompok B'], 'SD IT': [], 'SMP IT': ['Reguler', 'Boarding'] };
+    let editId = null;
+
+    function fillEditSub(jenjang, current) {
+        const opts = SUB_OPTS[jenjang] || [];
+        $('e_sub_wrap').classList.toggle('hidden', !opts.length);
+        $('e_sub_label').innerText = jenjang === 'SMP IT' ? 'Program' : 'Kelompok';
+        $('e_sub').innerHTML = opts.map(o => '<option value="' + o + '"' + (o === current ? ' selected' : '') + '>' + o + '</option>').join('');
+    }
+    function onEditJenjang() { fillEditSub($('e_jenjang').value, ''); }
+
+    function openEdit(id) {
+        const d = dbData.find(x => x.id === id);
+        if (!d) return;
+        editId = id;
+        $('e_tgl').value = dateKey(d.tgl);
+        $('e_metode').value = d.metode;
+        $('e_ortu').value = d.ortu;
+        $('e_alamat').value = d.alamat;
+        $('e_hp').value = String(d.hp || '');
+        const tj = d.tujuan || 'Survei PPDB';
+        $('e_tujuan').innerHTML = '<option value="Survei PPDB">Survei PPDB</option>' + (tj !== 'Survei PPDB' ? '<option value="' + escSet(tj) + '">' + escSet(tj) + '</option>' : '');
+        $('e_tujuan').value = tj;
+        $('e_jenjang').value = d.jenjang;
+        fillEditSub(d.jenjang, d.sub);
+        if ($('editModal').classList.contains('hidden')) a11yOpen($('editModal'));
+        $('editModal').classList.remove('hidden');
+        $('editModal').classList.add('flex');
+    }
+    function closeEdit() {
+        const was = !$('editModal').classList.contains('hidden');
+        $('editModal').classList.add('hidden');
+        $('editModal').classList.remove('flex');
+        editId = null;
+        if (was) a11yClose();
+    }
+
+    function saveEdit() {
+        const v = { id: editId, tgl: $('e_tgl').value, metode: $('e_metode').value, ortu: $('e_ortu').value.trim(),
+            alamat: $('e_alamat').value.trim(), hp: $('e_hp').value.replace(/\D/g, ''), tujuan: $('e_tujuan').value, jenjang: $('e_jenjang').value };
+        const opts = SUB_OPTS[v.jenjang] || [];
+        v.sub = opts.length ? $('e_sub').value : '-';
+        if (!v.tgl) { toast('Tanggal kunjungan wajib diisi.'); return; }
+        if (!v.ortu) { toast('Nama orang tua wajib diisi.'); return; }
+        if (!v.alamat) { toast('Alamat wajib diisi.'); return; }
+        if (v.hp.length < 8 || v.hp.length > 15) { toast('Nomor HP tidak valid (8 sampai 15 digit).'); return; }
+        if (opts.length && !v.sub) { toast('Pilih ' + (v.jenjang === 'SMP IT' ? 'program' : 'kelompok') + '.'); return; }
+
+        const apply = () => {
+            const d = dbData.find(x => x.id === v.id);
+            const pindah = d && d.jenjang !== v.jenjang;
+            if (d) Object.assign(d, { tgl: v.tgl, metode: v.metode, ortu: v.ortu, alamat: v.alamat, hp: v.hp, tujuan: v.tujuan, jenjang: v.jenjang, sub: v.sub });
+            closeEdit();
+            renderDashboard();
+            if (pindah) toast('Data dipindahkan ke jenjang ' + v.jenjang + '.');
+        };
+        if (IS_PREVIEW) { apply(); return; }
+        if (!ADMIN_CRED) { toast('Sesi login berakhir. Silakan login ulang.'); return; }
+        const btn = $('btnSimpanEdit');
+        btn.disabled = true; btn.innerText = 'Menyimpan...';
+        api({ action: 'updateTamu', data: v })
+        .then(r => { if (r.success) apply(); else toast('Gagal menyimpan: ' + r.error); })
+        .catch(() => toast("Gangguan jaringan! Pastikan Web App GAS di-deploy sebagai 'Versi Baru'."))
+        .finally(() => { btn.disabled = false; btn.innerText = 'Simpan Perubahan'; });
+    }
+
+    // ==========================================
+    // HAPUS AMAN, TEMPAT SAMPAH & CADANGAN
+    // ==========================================
+    function previewBlock() {
+        if (IS_PREVIEW) { toast('Mode Preview: fitur ini membutuhkan server (Google Apps Script).'); return true; }
+        return false;
+    }
+    function adminCall(payload) {
+        if (!ADMIN_CRED) { toast('Sesi login berakhir. Silakan login ulang.'); return Promise.reject(new Error('no-auth')); }
+        return api(payload)
+            .then(r => { if (!r.success) throw new Error(r.error || 'Terjadi kesalahan.'); return r; });
+    }
+    function failAlert(e) { if (e && e.message !== 'no-auth' && !SESSION_RE.test(e.message || '')) toast('Gagal: ' + (e.message || e)); }
+
+    function openTool(titleHtml, bodyHtml) {
+        $('toolTitle').innerHTML = titleHtml;
+        $('toolBody').innerHTML = bodyHtml;
+        if ($('toolModal').classList.contains('hidden')) a11yOpen($('toolModal'));
+        $('toolModal').classList.remove('hidden'); $('toolModal').classList.add('flex');
+        feather.replace();
+    }
+    function setToolBody(html) { $('toolBody').innerHTML = html; feather.replace(); }
+    function closeTool() {
+        const was = !$('toolModal').classList.contains('hidden');
+        $('toolModal').classList.add('hidden'); $('toolModal').classList.remove('flex');
+        if (was) a11yClose();
+    }
+    const LOADING_HTML = '<div class="py-10 text-center text-slate-400 text-sm">Memuat...</div>';
+
+    // ---- Hapus aman
+    function deleteTamuUI(id) {
+        if (previewBlock()) return;
+        const d = dbData.find(x => x.id === id);
+        if (!d) return;
+        let msg = 'Pindahkan data "' + d.ortu + '" (' + d.jenjang + ') ke Tempat Sampah?\n\nData bisa dipulihkan kapan saja dari tombol Tempat Sampah.';
+        if (d.ket === 'Lanjut') msg = 'PERHATIAN: data ini sudah berstatus LANJUT MENDAFTAR.\n\n' + msg;
+        confirmDialog(msg, { danger: true, ok: 'Pindahkan' }).then(yes => {
+            if (!yes) return;
+            adminCall({ action: 'deleteTamu', id: id })
+                .then(() => { dbData = dbData.filter(x => x.id !== id); renderDashboard(); toast('Data dipindahkan ke Tempat Sampah.'); })
+                .catch(failAlert);
+        });
+    }
+
+    // ---- Tempat Sampah
+    const TITLE_TRASH = '<i data-feather="trash-2" class="w-5 h-5 mr-2 text-rose-500"></i> Tempat Sampah';
+    function openTrash() {
+        if (previewBlock()) return;
+        openTool(TITLE_TRASH, LOADING_HTML);
+        adminCall({ action: 'getTrash' }).then(r => {
+            const rows = r.data || [];
+            if (!rows.length) { setToolBody('<div class="py-10 text-center text-slate-400 text-sm">Tempat Sampah kosong.</div>'); return; }
+            setToolBody('<p class="text-xs text-slate-400 mb-3">Data di sini tidak tampil di dashboard maupun PDF. Pulihkan untuk mengembalikannya, atau hapus permanen (tidak bisa dibatalkan).</p>' +
+                '<div class="overflow-x-auto"><table class="w-full text-sm"><thead class="text-left text-xs text-slate-500"><tr><th class="py-2 pr-4">Data</th><th class="py-2 pr-4">Jenjang</th><th class="py-2 pr-4">Dihapus</th><th class="py-2 text-right">Aksi</th></tr></thead><tbody>' +
+                rows.map(t => '<tr class="border-t border-slate-100 align-middle"><td class="py-3 pr-4"><div class="font-semibold text-slate-800">' + escSet(t.ortu) + (t.siswa && t.siswa !== '-' ? ' <span class="font-normal text-slate-500">/ ' + escSet(t.siswa) + '</span>' : '') + '</div><div class="text-xs text-slate-400">' + escSet(t.hp) + ' · ' + escSet(t.tgl) + (t.ket === 'Lanjut' ? ' · <span class="text-emerald-600 font-semibold">Lanjut' + (t.nopend ? ' ' + escSet(t.nopend) : '') + '</span>' : '') + '</div></td>' +
+                    '<td class="py-3 pr-4 whitespace-nowrap">' + escSet(t.jenjang) + '</td>' +
+                    '<td class="py-3 pr-4 whitespace-nowrap text-xs text-slate-500">' + escSet(t.dihapus) + '<br>oleh ' + escSet(t.oleh) + '</td>' +
+                    '<td class="py-3 text-right whitespace-nowrap"><button type="button" onclick="restoreUI(\'' + escSet(t.id) + '\')" class="px-3 py-1.5 text-xs font-semibold bg-emerald-50 text-emerald-700 rounded-lg hover:bg-emerald-100 mr-1">Pulihkan</button>' +
+                    '<button type="button" onclick="purgeUI(\'' + escSet(t.id) + '\')" class="px-3 py-1.5 text-xs font-semibold bg-rose-50 text-rose-600 rounded-lg hover:bg-rose-100">Hapus Permanen</button></td></tr>').join('') +
+                '</tbody></table></div>');
+        }).catch(e => { closeTool(); failAlert(e); });
+    }
+    function restoreUI(id) {
+        adminCall({ action: 'restoreTamu', id: id }).then(() => { loadDataServer(); openTrash(); toast('Data dipulihkan.'); }).catch(failAlert);
+    }
+    function purgeUI(id) {
+        confirmDialog('Hapus PERMANEN data ini?\n\nData tidak bisa dipulihkan lagi.', { danger: true, ok: 'Hapus Permanen' }).then(yes => {
+            if (yes) adminCall({ action: 'purgeTamu', id: id }).then(() => openTrash()).catch(failAlert);
+        });
+    }
+
+    // ---- Cadangan data
+    function loadBackups() {
+        const el = $('bkList');
+        if (IS_PREVIEW) { el.innerText = 'Mode Preview: daftar cadangan tidak tersedia.'; return; }
+        el.innerText = 'Memuat daftar cadangan...';
+        adminCall({ action: 'getBackups' }).then(r => {
+            el.innerHTML = r.data.length ? r.data.map(b => '<div class="flex justify-between gap-3 py-1.5 border-t border-slate-100 first:border-0"><a href="' + escSet(b.url) + '" target="_blank" rel="noopener" class="text-primary hover:underline truncate">' + escSet(b.name) + '</a><span class="text-slate-400 shrink-0">' + escSet(b.waktu) + '</span></div>').join('') : 'Belum ada cadangan.';
+        }).catch(() => { el.innerText = 'Gagal memuat daftar cadangan.'; });
+    }
+    function backupNowUI() {
+        if (previewBlock()) return;
+        const btn = $('btnBackup'); btn.disabled = true; btn.innerText = 'Mencadangkan...';
+        adminCall({ action: 'backupNow' })
+            .then(r => { toast('Cadangan dibuat: ' + r.info.name); loadBackups(); })
+            .catch(failAlert)
+            .finally(() => { btn.disabled = false; btn.innerText = 'Cadangkan Sekarang'; });
+    }
+
+    // ==========================================
+    // PENGATURAN SISTEM PPDB
+    // ==========================================
+    let ADMIN_CRED = null;
+    function setDashTahun(t) { $('dashTahun').innerText = t || '-'; }
+    function loadTahunAjaran() {
+        if (IS_PREVIEW) { setDashTahun(SET_DEFAULT.tahun_ajaran); return; }
+        api({ action: 'getPengaturan' }).then(d => { if (d.success) setDashTahun(d.data.tahun_ajaran); }).catch(() => {});
+    }
+    let logoFileId = { kiri_tk: '', kiri_sd: '', kiri_smp: '', kanan: '' };
+    const SIDES = ['kiri_tk', 'kiri_sd', 'kiri_smp', 'kanan'];
+    let prevJ = 'tk';
+    function setPrevJ(j) { prevJ = j; renderKop(); }
+    const LOGO_ICON = { kiri: '🕌', kanan: '🌟' };
+    const SET_DEFAULT = {
+        nama_sekolah: 'Sekolah Islam Terpadu Al Madani', tahun_ajaran: '2026/2027', gelombang: 'Gelombang 1', npsn: '',
+        akreditasi: 'Terakreditasi A (Unggul)', mode_logo: 'DUA_LOGO',
+        logo_kiri_aktif: 'TRUE', logo_kiri_tk_url: '', logo_kiri_tk_file_id: '', logo_kiri_sd_url: '', logo_kiri_sd_file_id: '', logo_kiri_smp_url: '', logo_kiri_smp_file_id: '',
+        logo_kanan_aktif: 'FALSE', logo_kanan_url: '', logo_kanan_file_id: '',
+        kop_1: 'YAYASAN MASKANUL INSAN AL MADANI',
+        kop_2_tk: 'TAMAN KANAK-KANAK ISLAM TERPADU (TK IT) AL MADANI', kop_2_sd: 'SEKOLAH DASAR ISLAM TERPADU (SD IT) AL MADANI', kop_2_smp: 'SEKOLAH MENENGAH PERTAMA ISLAM TERPADU (SMP IT) AL MADANI',
+        kop_3: 'Jl. Raya Sindangagung - Purwasari Kab. Kuningan Jawa Barat',
+        kop_4: 'Telp/WA: 0877-2899-6771 | Website: almadani.sch.id | Email: ppdb@almadani.sch.id',
+        kota_ttd: 'Kuningan', nama_ttd: 'Nok Sindi Amelia, S.Pd., Gr.', jabatan_ttd: 'Ketua Panitia PPDB SIT Al Madani', nip_ttd: '2016 171293 23 0022',
+        backup_mode: 'OFF', backup_keep: '14'
+    };
+    const SET_FIELDS = { nama_sekolah:'p_nama', tahun_ajaran:'p_tahun', gelombang:'p_gel', npsn:'p_npsn', akreditasi:'p_akred',
+        kop_1:'p_kop1', kop_2_tk:'p_kop2_tk', kop_2_sd:'p_kop2_sd', kop_2_smp:'p_kop2_smp', kop_3:'p_kop3', kop_4:'p_kop4',
+        kota_ttd:'p_kota', nama_ttd:'p_nama_ttd', jabatan_ttd:'p_jabatan', nip_ttd:'p_nip',
+        backup_mode:'p_bk_mode', backup_keep:'p_bk_keep' };
+
+    function escSet(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+    const gv = id => $(id).value;
+
+    function openSettings() {
+        $('viewAdmin').classList.add('hidden');
+        $('viewSettings').classList.remove('hidden');
+        feather.replace();
+        if (IS_PREVIEW) { fillSettings(SET_DEFAULT); return; }
+        fillSettings(SET_DEFAULT);
+        $('setStatus').innerText = 'Memuat pengaturan...';
+        loadBackups();
+        api({ action: 'getPengaturan' }).then(d => {
+            if (d.success) { fillSettings(d.data); $('setStatus').innerText = ''; }
+            else $('setStatus').innerText = 'Gagal memuat: ' + d.error;
+        }).catch(() => { $('setStatus').innerText = 'Gangguan jaringan saat memuat pengaturan.'; });
+    }
+
+    function closeSettings() {
+        $('viewSettings').classList.add('hidden');
+        $('viewAdmin').classList.remove('hidden');
+    }
+
+    function fillSettings(d) {
+        const v = Object.assign({}, SET_DEFAULT, d || {});
+        Object.keys(SET_FIELDS).forEach(k => { $(SET_FIELDS[k]).value = v[k]; });
+        ['kiri', 'kanan'].forEach(s => { $('p_logo_' + s + '_aktif').checked = String(v['logo_' + s + '_aktif']).toUpperCase() === 'TRUE'; });
+        SIDES.forEach(s => {
+            $('p_logo_' + s + '_url').value = v['logo_' + s + '_url'] || '';
+            logoFileId[s] = v['logo_' + s + '_file_id'] || '';
+        });
+        const r = document.querySelector('input[name="p_mode"][value="' + v.mode_logo + '"]') || document.querySelector('input[name="p_mode"][value="DUA_LOGO"]');
+        r.checked = true;
+        onModeChange();
+    }
+
+    function collectSettings() {
+        const v = {};
+        Object.keys(SET_FIELDS).forEach(k => { v[k] = gv(SET_FIELDS[k]); });
+        const mr = document.querySelector('input[name="p_mode"]:checked');
+        v.mode_logo = mr ? mr.value : 'DUA_LOGO';
+        ['kiri', 'kanan'].forEach(s => { v['logo_' + s + '_aktif'] = $('p_logo_' + s + '_aktif').checked ? 'TRUE' : 'FALSE'; });
+        SIDES.forEach(s => {
+            v['logo_' + s + '_url'] = gv('p_logo_' + s + '_url').trim();
+            v['logo_' + s + '_file_id'] = logoFileId[s] || '';
+        });
+        return v;
+    }
+
+    function onModeChange() {
+        const m = document.querySelector('input[name="p_mode"]:checked').value;
+        document.querySelectorAll('.mode-opt').forEach(l => {
+            const on = l.dataset.mode === m;
+            l.classList.toggle('border-primary', on); l.classList.toggle('bg-indigo-50', on); l.classList.toggle('border-slate-200', !on);
+        });
+        [['kiri', m !== 'TANPA_LOGO'], ['kanan', m === 'DUA_LOGO']].forEach(([s, en]) => {
+            const c = $('card_logo_' + s);
+            c.classList.toggle('opacity-40', !en); c.classList.toggle('pointer-events-none', !en);
+        });
+        renderKop();
+    }
+
+    function logoHtml(url, side) {
+        const ic = LOGO_ICON[side.indexOf('kiri') === 0 ? 'kiri' : 'kanan'];
+        if (!url) return ic;
+        return '<img src="' + escSet(url) + '" alt="logo" style="width:100%;height:100%;object-fit:contain" onerror="this.replaceWith(document.createTextNode(\'' + ic + '\'))">';
+    }
+
+    function renderKop() {
+        const v = collectSettings(), m = v.mode_logo;
+        $('kopBadge').innerText = m;
+        SIDES.forEach(s => { $('thumb_' + s).innerHTML = logoHtml(v['logo_' + s + '_url'], s); });
+        document.querySelectorAll('#prevJTabs button').forEach(b => { b.className = 'px-3 py-1 text-[11px] font-semibold rounded-md ' + (b.dataset.j === prevJ ? 'bg-primary text-white' : 'bg-slate-700 text-slate-300'); });
+        const cell = g => { const s = g === 'kiri' ? 'kiri_' + prevJ : 'kanan'; return '<div class="shrink-0 flex items-center justify-center" style="width:52px;height:52px;font-size:30px">' + (v['logo_' + g + '_aktif'] === 'TRUE' ? logoHtml(v['logo_' + s + '_url'], s) : '') + '</div>'; };
+        const line = (t, cls) => t.trim() ? '<div class="' + cls + '">' + escSet(t) + '</div>' : '';
+        const tgl = new Date().toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' });
+        $('kopPreview').innerHTML =
+            '<div class="flex items-center gap-2">' + (m !== 'TANPA_LOGO' ? cell('kiri') : '') +
+            '<div class="flex-1 text-center leading-tight">' +
+              line(v.kop_1, 'text-[10px] font-semibold text-slate-700') + line(v['kop_2_' + prevJ], 'text-[12px] font-bold text-slate-900') +
+              line(v.kop_3, 'text-[8px] text-slate-600') + line(v.kop_4, 'text-[8px] text-slate-600') +
+            '</div>' + (m === 'DUA_LOGO' ? cell('kanan') : (m === 'SATU_LOGO' ? '<div class="shrink-0" style="width:52px"></div>' : '')) + '</div>' +
+            '<div class="border-t-2 border-slate-900 my-2"></div>' +
+            '<div class="text-center mt-3"><div class="text-[12px] font-bold underline text-slate-900">KARTU TANDA BUKTI PENDAFTARAN</div>' +
+            '<div class="text-[9px] text-slate-500">Tahun Ajaran ' + escSet(v.tahun_ajaran) + ' · ' + escSet(v.gelombang) + '</div></div>' +
+            '<div class="my-3 p-3 text-[9px] text-slate-500 bg-slate-50 border border-slate-200 rounded">[Pratinjau Format Cetak Dokumen Resmi PPDB ' + escSet(v.nama_sekolah) + ' dengan Kop Surat 1 atau 2 Logo]</div>' +
+            '<div class="border-t border-slate-200 pt-3 text-right text-[10px] text-slate-700 leading-snug">' +
+              '<div>' + escSet(v.kota_ttd) + ', ' + tgl + '</div><div>' + escSet(v.jabatan_ttd) + ',</div><div style="height:34px"></div>' +
+              '<div class="font-bold underline">( ' + escSet(v.nama_ttd) + ' )</div><div class="text-[8px] font-mono text-slate-500">NIP: ' + escSet(v.nip_ttd) + '</div></div>';
+    }
+
+    function onLogoUrlInput(side) { logoFileId[side] = ''; renderKop(); }
+
+    function clearLogo(side) {
+        $('p_logo_' + side + '_url').value = '';
+        logoFileId[side] = '';
+        renderKop();
+    }
+
+    function onLogoFile(side, input) {
+        const f = input.files[0]; input.value = '';
+        if (!f) return;
+        if (['image/png', 'image/jpeg', 'image/webp'].indexOf(f.type) === -1) { toast('Format harus PNG, JPG, atau WEBP.'); return; }
+        if (f.size > 1024 * 1024) { toast('Ukuran file maksimal 1 MB.'); return; }
+        if (!IS_PREVIEW && !ADMIN_CRED) { toast('Sesi login berakhir. Silakan login ulang.'); return; }
+        const btn = $('btn_up_' + side), old = btn.innerText;
+        btn.disabled = true; btn.innerText = 'Mengunggah...';
+        const done = () => { btn.disabled = false; btn.innerText = old; };
+        const reader = new FileReader();
+        reader.onload = () => {
+            const img = new Image();
+            img.onload = () => {
+                const r = Math.min(1, 400 / Math.max(img.width, img.height));
+                const c = document.createElement('canvas');
+                c.width = Math.round(img.width * r); c.height = Math.round(img.height * r);
+                c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+                const mime = f.type === 'image/jpeg' ? 'image/jpeg' : 'image/png';
+                const dataUrl = c.toDataURL(mime, 0.9);
+                const apply = (url, fid) => {
+                    $('p_logo_' + side + '_url').value = url;
+                    $('p_logo_' + side.split('_')[0] + '_aktif').checked = true;
+                    if (side !== 'kanan') prevJ = side.split('_')[1];
+                    logoFileId[side] = fid; renderKop(); done();
+                };
+                if (IS_PREVIEW) { apply(dataUrl, ''); return; }
+                api({ action: 'uploadLogo', base64: dataUrl.split(',')[1], mime: mime, fileName: f.name, posisi: side })
+                .then(d => { if (d.success) apply(d.url, d.fileId); else { toast('Gagal upload: ' + d.error); done(); } })
+                .catch(() => { toast('Gangguan jaringan saat upload logo.'); done(); });
+            };
+            img.onerror = () => { toast('File gambar tidak valid.'); done(); };
+            img.src = reader.result;
+        };
+        reader.readAsDataURL(f);
+    }
+
+    function simpanPengaturan() {
+        const v = collectSettings();
+        if (!v.nama_sekolah.trim()) { toast('Nama resmi sekolah wajib diisi.'); return; }
+        if (IS_PREVIEW) { toast('Mode Preview: pengaturan disimulasikan (tidak dikirim ke server).'); return; }
+        if (!ADMIN_CRED) { toast('Sesi login berakhir. Silakan login ulang.'); return; }
+        const btn = $('btnSimpanSet');
+        btn.disabled = true; btn.innerText = 'Menyimpan...';
+        api({ action: 'savePengaturan', data: v })
+        .then(d => { if (d.success) setDashTahun(v.tahun_ajaran); toast(d.success ? 'Pengaturan berhasil disimpan!' : 'Gagal menyimpan: ' + d.error); })
+        .catch(() => toast('Gangguan jaringan! Pastikan Web App GAS di-deploy sebagai Versi Baru.'))
+        .finally(() => { btn.disabled = false; btn.innerText = 'Simpan Pengaturan'; });
+    }
+
+    function resetPengaturan() {
+        confirmDialog('Kembalikan semua isian ke nilai default?\n(Belum tersimpan sebelum Anda klik Simpan Pengaturan)').then(yes => { if (yes) fillSettings(SET_DEFAULT); });
+    }
+
+    function formatWIBDate(isoString) {
+        if (!isoString) return "";
+        try {
+            const d = new Date(isoString);
+            return d.toLocaleDateString("en-GB", { timeZone: "Asia/Jakarta", day: "2-digit", month: "2-digit", year: "numeric" });
+        } catch (e) {
+            return isoString.substring(0, 10);
+        }
+    }
+
+    function renderDashboard() {
+        const tbody = $('tableBody');
+        const thead = $('tableHead');
+        const metrics = $('metricCards');
+        tbody.innerHTML = ''; metrics.innerHTML = '';
+        const mlist = $('mobileList'); mlist.innerHTML = '';
+        DUP = buildDup();
+        syncFilterBar();
+        syncSortSelect();
+
+        let dataUnit = dbData.filter(d => d.jenjang === currentUnit);
+        let dataTampil = [];
+        
+        if(currentSub === 'awal') {
+            dataTampil = dataUnit.slice().reverse();      // bila tanggal sama, yang dimasukkan terakhir tampil lebih dulu
+            dataTampil.sort((a,b) => new Date(b.tgl) - new Date(a.tgl));   // bawaan: terbaru di atas
+            dataTampil = applySort(dataTampil, 'awal');
+            dataTampil = applyFilters(dataTampil, 'awal');
+            filteredDataLength = dataTampil.length;
+
+            const mOff = dataUnit.filter(d=>d.metode.includes('Offline')).length;
+            const mOn = dataUnit.filter(d=>d.metode.includes('Online')).length;
+            
+            const mSdh = dataUnit.filter(d=>d.ket === 'Lanjut').length;
+            const mBlm = dataUnit.filter(d=>d.ket === 'Belum').length;
+            const mBatal = dataUnit.filter(d=>d.ket === 'Tidak').length;
+
+            metrics.innerHTML = `
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex items-center">
+                    <div class="w-12 h-12 rounded-full bg-indigo-100 text-primary flex items-center justify-center mr-4"><i data-feather="users"></i></div>
+                    <div><p class="text-slate-400 text-xs font-medium">Total Tamu</p><h3 class="text-2xl font-bold text-slate-800">${dataUnit.length}</h3></div>
+                </div>
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex items-center">
+                    <div class="w-10 h-10 rounded-full bg-sky-100 text-sky-500 flex items-center justify-center mr-3"><i data-feather="map-pin" class="w-4 h-4"></i></div>
+                    <div class="text-xs text-slate-500 space-y-1 font-medium">
+                        <div>Offline: <b class="text-slate-800">${mOff}</b></div>
+                        <div>Online: <b class="text-slate-800">${mOn}</b></div>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex items-center">
+                    <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-500 flex items-center justify-center mr-3"><i data-feather="check-square" class="w-4 h-4"></i></div>
+                    <div class="text-xs text-slate-500 space-y-1 font-medium">
+                        <div>Lanjut Mendaftar: <b class="text-emerald-600">${mSdh}</b></div>
+                        <div>Belum Mendaftar: <b class="text-slate-800">${mBlm}</b></div>
+                        <div>Tidak/Batal: <b class="text-red-500">${mBatal}</b></div>
+                    </div>
+                </div>
+            `;
+
+            let subHeaderHtml = '';
+            if(currentUnit === 'TK IT') subHeaderHtml = '<th class="py-4 px-6 font-semibold whitespace-nowrap">Kelompok</th>';
+            else if(currentUnit === 'SMP IT') subHeaderHtml = '<th class="py-4 px-6 font-semibold whitespace-nowrap">Program</th>';
+
+            thead.innerHTML = `
+                <tr class="bg-slate-50/70 text-slate-600 border-b border-slate-200 text-left text-[13px] uppercase tracking-wider">
+                    <th class="py-4 px-6 font-semibold rounded-tl-xl whitespace-nowrap">Tanggal</th>
+                    <th class="py-4 px-6 font-semibold whitespace-nowrap">Nama Ortu</th>
+                    <th class="py-4 px-6 font-semibold min-w-[220px] max-w-[340px]">Alamat & No HP</th>
+                    <th class="py-4 px-6 font-semibold whitespace-nowrap">Metode Survei</th>
+                    ${subHeaderHtml}
+                    <th class="py-4 px-6 font-semibold whitespace-nowrap text-center">Keterangan</th>
+                    <th class="py-4 px-6 font-semibold rounded-tr-xl whitespace-nowrap text-center">Aksi</th>
+                </tr>
+            `;
+            
+            decorateSortHeaders(currentSub);
+            const startIdx = (currentPage - 1) * itemsPerPage;
+            const pageData = dataTampil.slice(startIdx, startIdx + itemsPerPage);
+
+            pageData.forEach(row => {
+                let tr = document.createElement('tr');
+                tr.className = "border-b border-slate-100 hover:bg-indigo-50/30 transition-colors";
+                
+                const dupBadge = dupBadgeHtml(row);
+
+                let subCellHtml = '';
+                if(currentUnit === 'TK IT' || currentUnit === 'SMP IT') {
+                    subCellHtml = `<td class="py-4 px-6 text-sm text-slate-800 align-middle whitespace-nowrap">${escSet(row.sub)}</td>`;
+                }
+
+                tr.innerHTML = `
+                    <td class="py-4 px-6 text-sm text-slate-800 whitespace-nowrap align-middle">${formatWIBDate(row.tgl)}</td>
+                    <td class="py-4 px-6 text-sm text-slate-800 whitespace-nowrap align-middle">${escSet(row.ortu)}</td>
+                    <td class="py-4 px-6 text-sm text-slate-800 align-middle leading-relaxed min-w-[220px] max-w-[340px]">
+                        ${escSet(row.alamat)}
+                        <span class="text-slate-500 block mt-1.5 text-xs flex items-center">
+                            <i data-feather="phone" class="w-3 h-3 mr-1.5 text-slate-400"></i>${escSet(row.hp)}${dupBadge}
+                        </span>
+                    </td>
+                    <td class="py-4 px-6 text-sm text-slate-800 align-middle whitespace-nowrap">${escSet(row.metode)}</td>
+                    ${subCellHtml}
+                    <td class="py-4 px-6 align-middle text-center">
+                        <select onchange="updateData('${row.id}', 'ket', this.value)" class="bg-slate-100 border border-slate-200/60 text-slate-800 rounded-xl px-3 py-2.5 text-sm outline-none focus:ring-2 focus:ring-primary min-w-[150px] cursor-pointer hover:bg-slate-200/50 transition-colors">
+                            <option value="Belum" ${row.ket==='Belum'?'selected':''}>Belum</option>
+                            <option value="Lanjut" ${row.ket==='Lanjut'?'selected':''}>Lanjut (Mendaftar)</option>
+                            <option value="Tidak" ${row.ket==='Tidak'?'selected':''}>Tidak</option>
+                        </select>
+                    </td>
+                    <td class="py-4 px-6 align-middle text-center">
+                        <div class="act-btns inline-flex items-center gap-1">
+                            <button type="button" onclick="openEdit('${row.id}')" title="Edit data" aria-label="Edit data" class="w-9 h-9 inline-flex items-center justify-center rounded-lg bg-slate-100 text-slate-600 hover:bg-indigo-100 hover:text-primary"><i data-feather="edit-2" class="w-4 h-4"></i></button>
+                            <button type="button" onclick="deleteTamuUI('${row.id}')" title="Hapus (pindah ke Tempat Sampah)" aria-label="Hapus data" class="w-9 h-9 inline-flex items-center justify-center rounded-lg bg-slate-100 text-slate-600 hover:bg-rose-100 hover:text-rose-600"><i data-feather="trash-2" class="w-4 h-4"></i></button>
+                        </div>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        } 
+        
+        // =========================================================
+        // DATA LANJUT MENDAFTAR (SUB-TAB 2)
+        // =========================================================
+        else {
+            dataTampil = dataUnit.filter(d => d.ket === 'Lanjut');
+            dataTampil.sort((a,b) => {
+                if(a.nopend && b.nopend) {
+                    return a.nopend.localeCompare(b.nopend);
+                }
+                return (new Date(a.ts_lanjut) || 0) - (new Date(b.ts_lanjut) || 0);
+            });
+            dataTampil = applySort(dataTampil, 'lanjut');
+            dataTampil = applyFilters(dataTampil, 'lanjut');
+            
+            filteredDataLength = dataTampil.length;
+
+            let metricProgramHtml = '';
+            
+            // Perhitungan untuk Metrik Offline/Online Siswa Lanjut
+            let mOff = dataTampil.filter(d=>d.metode.includes('Offline')).length;
+            let mOn = dataTampil.filter(d=>d.metode.includes('Online')).length;
+            let metricMetodeHtml = `
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex items-center">
+                    <div class="w-10 h-10 rounded-full bg-sky-100 text-sky-500 flex items-center justify-center mr-3 shrink-0"><i data-feather="map-pin" class="w-4 h-4"></i></div>
+                    <div class="text-xs text-slate-500 space-y-1 font-medium">
+                        <div>Offline: <b class="text-slate-800">${mOff}</b></div>
+                        <div>Online: <b class="text-slate-800">${mOn}</b></div>
+                    </div>
+                </div>
+            `;
+
+            // METRIK UI MENYESUAIKAN TEMA
+            if(currentUnit === 'TK IT') {
+                let sdA = dataTampil.filter(d => d.sub === 'Kelompok A');
+                let sdB = dataTampil.filter(d => d.sub === 'Kelompok B');
+                let l_A = sdA.filter(d => d.jk === 'Laki-laki').length;
+                let p_A = sdA.filter(d => d.jk === 'Perempuan').length;
+                let l_B = sdB.filter(d => d.jk === 'Laki-laki').length;
+                let p_B = sdB.filter(d => d.jk === 'Perempuan').length;
+                
+                metricProgramHtml = `
+                    <div class="bg-white py-3 px-2 rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center">
+                        <div class="flex items-center px-2 w-full justify-center">
+                            <div class="w-10 h-10 bg-indigo-50 border border-indigo-100 text-primary rounded-xl flex items-center justify-center text-xl font-bold mr-3">A</div>
+                            <div class="flex flex-col text-[13px] text-slate-500 space-y-0.5">
+                                <div class="flex justify-between w-10"><span>L:</span> <span class="text-slate-800 font-medium">${l_A}</span></div>
+                                <div class="flex justify-between w-10"><span>P:</span> <span class="text-slate-800 font-medium">${p_A}</span></div>
+                            </div>
+                        </div>
+                        <div class="w-px h-10 bg-slate-200 mx-1"></div>
+                        <div class="flex items-center px-2 w-full justify-center">
+                            <div class="w-10 h-10 bg-indigo-50 border border-indigo-100 text-primary rounded-xl flex items-center justify-center text-xl font-bold mr-3">B</div>
+                            <div class="flex flex-col text-[13px] text-slate-500 space-y-0.5">
+                                <div class="flex justify-between w-10"><span>L:</span> <span class="text-slate-800 font-medium">${l_B}</span></div>
+                                <div class="flex justify-between w-10"><span>P:</span> <span class="text-slate-800 font-medium">${p_B}</span></div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (currentUnit === 'SMP IT') {
+                let sdB = dataTampil.filter(d => d.sub === 'Boarding');
+                let sdR = dataTampil.filter(d => d.sub === 'Reguler');
+                let l_B = sdB.filter(d => d.jk === 'Laki-laki').length;
+                let p_B = sdB.filter(d => d.jk === 'Perempuan').length;
+                let l_R = sdR.filter(d => d.jk === 'Laki-laki').length;
+                let p_R = sdR.filter(d => d.jk === 'Perempuan').length;
+                
+                metricProgramHtml = `
+                    <div class="bg-white py-3 px-2 rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center">
+                        <div class="flex flex-col items-center w-full">
+                            <div class="w-10/12 py-1 bg-indigo-50 border border-indigo-100 rounded-lg text-center text-xs font-semibold text-primary mb-2">Boarding</div>
+                            <div class="flex space-x-3 text-[13px] text-slate-500">
+                                <div>L: <span class="text-slate-800 font-medium">${l_B}</span></div>
+                                <div>P: <span class="text-slate-800 font-medium">${p_B}</span></div>
+                            </div>
+                        </div>
+                        <div class="w-px h-12 bg-slate-200 mx-1"></div>
+                        <div class="flex flex-col items-center w-full">
+                            <div class="w-10/12 py-1 bg-indigo-50 border border-indigo-100 rounded-lg text-center text-xs font-semibold text-primary mb-2">Reguler</div>
+                            <div class="flex space-x-3 text-[13px] text-slate-500">
+                                <div>L: <span class="text-slate-800 font-medium">${l_R}</span></div>
+                                <div>P: <span class="text-slate-800 font-medium">${p_R}</span></div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else { // SD IT
+                let l = dataTampil.filter(d => d.jk === 'Laki-laki').length;
+                let p = dataTampil.filter(d => d.jk === 'Perempuan').length;
+                metricProgramHtml = `
+                    <div class="bg-white py-3 px-4 rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center">
+                        <div class="flex flex-col items-center w-full">
+                            <div class="w-3/4 py-1.5 bg-indigo-50 border border-indigo-100 rounded-lg text-center text-sm font-semibold text-primary mb-3">Semua Siswa</div>
+                            <div class="flex space-x-8 text-sm text-slate-500">
+                                <div>L: <span class="text-slate-800 font-medium">${l}</span></div>
+                                <div>P: <span class="text-slate-800 font-medium">${p}</span></div>
+                            </div>
+                        </div>
+                    </div>
+                 `;
+            }
+
+            metrics.innerHTML = `
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex items-center">
+                    <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-500 flex items-center justify-center mr-4 shrink-0"><i data-feather="user-check"></i></div>
+                    <div><p class="text-slate-400 text-xs font-medium">Siswa Lanjut (Mendaftar)</p><h3 class="text-2xl font-bold text-slate-800">${dataTampil.length}</h3></div>
+                </div>
+                ${metricMetodeHtml}
+                ${metricProgramHtml}
+            `;
+
+            let subHeaderHtml = '';
+            if(currentUnit === 'TK IT') subHeaderHtml = '<th class="py-4 px-6 font-semibold whitespace-nowrap">Kelompok</th>';
+            else if(currentUnit === 'SMP IT') subHeaderHtml = '<th class="py-4 px-6 font-semibold whitespace-nowrap">Program</th>';
+
+            thead.innerHTML = `
+                <tr class="bg-slate-50/70 text-slate-600 border-b border-slate-200 text-left text-[13px] uppercase tracking-wider">
+                    <th class="py-4 px-6 font-semibold rounded-tl-xl whitespace-nowrap">NO. PENDAFTARAN</th>
+                    <th class="py-4 px-6 font-semibold whitespace-nowrap">Tanggal</th>
+                    <th class="py-4 px-6 font-semibold whitespace-nowrap">Nama Ortu</th>
+                    <th class="py-4 px-6 font-semibold whitespace-nowrap">Nama Siswa</th>
+                    <th class="py-4 px-6 font-semibold whitespace-nowrap">Gender</th>
+                    <th class="py-4 px-6 font-semibold whitespace-nowrap">Usia</th>
+                    <th class="py-4 px-6 font-semibold whitespace-nowrap">Alamat</th>
+                    ${subHeaderHtml}
+                    <th class="py-4 px-6 font-semibold rounded-tr-xl whitespace-nowrap">Gelombang</th>
+                </tr>
+            `;
+
+            decorateSortHeaders(currentSub);
+            const startIdx = (currentPage - 1) * itemsPerPage;
+            const pageData = dataTampil.slice(startIdx, startIdx + itemsPerPage);
+
+            const colCh = (fn, min, max) => Math.min(max, Math.max(min, ...dataTampil.map(r => String(fn(r) || '').length + 2)));
+            const wNo = colCh(r => r.nopend, 12, 24), wSiswa = colCh(r => r.siswa === '-' ? '' : r.siswa, 16, 34), wUsia = colCh(r => r.usia === '-' ? '' : r.usia, 8, 14);
+            pageData.forEach(row => {
+                let tr = document.createElement('tr');
+                tr.className = "border-b border-slate-100 hover:bg-indigo-50/30 transition-colors";
+                
+                let inNoPend = `<input type="text" placeholder="No..." value="${escSet(row.nopend||'')}" onblur="updateData('${row.id}', 'nopend', this.value)" class="table-input" style="width:${wNo}ch">`;
+                
+                let tglVal = row.ts_lanjut ? row.ts_lanjut.substring(0,10) : '';
+                let inTglLanjut = `<input type="date" value="${tglVal}" onblur="updateData('${row.id}', 'ts_lanjut', this.value)" class="table-input">`;
+
+                const dupSw = !!swDupList(row);
+                let inSiswa = `<input type="text" placeholder="Nama..." value="${escSet(row.siswa==='-'?'':row.siswa)}" onblur="updateData('${row.id}', 'siswa', this.value)" class="table-input${dupSw ? ' is-dup' : ''}" style="width:${wSiswa}ch"${dupSw ? ' title="Nama siswa ini muncul lebih dari satu kali di jenjang ini"' : ''}>`;
+                let inUsia = `<input type="text" placeholder="0 thn" value="${escSet(row.usia==='-'?'':row.usia)}" onblur="updateData('${row.id}', 'usia', this.value)" class="table-input" style="width:${wUsia}ch">`;
+                
+                let selJk = `
+                    <select onchange="updateData('${row.id}', 'jk', this.value)" class="table-input cursor-pointer">
+                        <option value="-">Pilih</option>
+                        <option value="Laki-laki" ${row.jk==='Laki-laki'?'selected':''}>Laki-laki</option>
+                        <option value="Perempuan" ${row.jk==='Perempuan'?'selected':''}>Perempuan</option>
+                    </select>
+                `;
+
+                let subCellHtml = '';
+                if(currentUnit === 'TK IT' || currentUnit === 'SMP IT') {
+                    subCellHtml = `<td class="py-4 px-6 text-sm text-slate-800 align-middle whitespace-nowrap">${escSet(row.sub)}</td>`;
+                }
+
+                tr.innerHTML = `
+                    <td class="py-4 px-6 align-middle">${inNoPend}</td>
+                    <td class="py-4 px-6 align-middle">${inTglLanjut}</td>
+                    <td class="py-4 px-6 text-sm text-slate-800 whitespace-nowrap align-middle">${escSet(row.ortu)}</td>
+                    <td class="py-4 px-6 align-middle">${inSiswa}</td>
+                    <td class="py-4 px-6 align-middle">${selJk}</td>
+                    <td class="py-4 px-6 align-middle">${inUsia}</td>
+                    <td class="py-4 px-6 text-sm text-slate-800 align-middle whitespace-nowrap">${escSet(row.alamat)}</td>
+                    ${subCellHtml}
+                    <td class="py-4 px-6 align-middle">
+                        <select onchange="updateData('${row.id}', 'gel', this.value)" class="table-input cursor-pointer !text-primary">
+                            <option value="" ${row.gel===''?'selected':''}>Pilih</option>
+                            <option value="Gel 1" ${row.gel==='Gel 1'?'selected':''}>Gelombang 1</option>
+                            <option value="Gel 2" ${row.gel==='Gel 2'?'selected':''}>Gelombang 2</option>
+                        </select>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+        
+        // Daftar kartu (HP): "Muat lebih banyak" menggantikan nomor halaman
+        const shown = dataTampil.slice(0, mobileShown);
+        mlist.innerHTML = shown.map(r => currentSub === 'awal' ? cardAwal(r, dupBadgeHtml(r)) : cardLanjut(r)).join('') +
+            (dataTampil.length > shown.length ? '<button type="button" class="m-load" onclick="moreMobile()">Muat lebih banyak (' + (dataTampil.length - shown.length) + ' lagi)</button>' : '') +
+            (dataTampil.length ? '<p class="text-center text-xs text-slate-400 pt-1">Menampilkan ' + shown.length + ' dari ' + dataTampil.length + ' data</p>' : '');
+
+        // Pesan jika tidak ada data yang cocok
+        if(!dataTampil.length) {
+            tbody.innerHTML = '<tr><td colspan="10" class="py-16 text-center text-slate-400 text-sm">Tidak ada data yang cocok.</td></tr>';
+            mlist.innerHTML = '<div class="text-center text-slate-400 text-sm py-14">Tidak ada data yang cocok.</div>';
+        }
+
+        // Update Pagination UI
+        const totalPages = Math.ceil(filteredDataLength / itemsPerPage) || 1;
+        $('pageIndicator').innerText = `Halaman ${currentPage} / ${totalPages}`;
+        $('btnPrevPage').disabled = currentPage === 1;
+        $('btnNextPage').disabled = currentPage === totalPages;
+        
+        feather.replace();
+    }
+
+    // EXPORT PDF
+    function triggerPDF(mode) {
+        toast('Sedang memproses laporan ' + currentUnit + ' (' + mode + ')...', 'info');
+        api({ action: 'generatePDF', jenjang: currentUnit, mode: mode })
+        .then(data => {
+            if(data.success && data.base64) downloadBase64Pdf(data.name, data.base64);
+            else toast('Gagal membuat PDF: ' + data.error);
+        }).catch(() => toast('Gangguan jaringan saat membuat PDF.'));
+    }
+    function downloadBase64Pdf(name, b64) {
+        const bin = atob(b64), arr = new Uint8Array(bin.length);
+        for (let i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+        const url = URL.createObjectURL(new Blob([arr], { type: 'application/pdf' }));
+        const a = document.createElement('a'); a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 60000);
+        toast('Laporan PDF siap diunduh.', 'success');
+    }
+</script>
+</body>
+</html>
