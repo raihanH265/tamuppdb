@@ -50,7 +50,7 @@
     </script>
     <style>
         /* ===== Variabel tema ===== */
-        :root { --primary: #6366F1; --primary-dark: #4F46E5; --ink: #0F172A; --line: #E2E8F0; --bg: #F5F3FF; }
+        :root { --primary: #6366F1; --primary-dark: #4F46E5; --ink: #0F172A; --line: #E2E8F0; --bg: #F5F3FF; --ease-pro: cubic-bezier(0.22, 1, 0.36, 1); }
 
         /* ===== Dasar & Latar Belakang Ambient ===== */
         html.lenis, html.lenis body { height: auto; }
@@ -80,9 +80,155 @@
         .word-mask { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: 0.08em; margin-bottom: -0.08em; }
         .word-inner { display: inline-block; will-change: transform, opacity; }
         :focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
-        button { transition: background-color .15s, color .15s, box-shadow .15s, transform .1s; }
-        button:not(:disabled):active { transform: scale(.97); }
+        button { transition: background-color .22s var(--ease-pro), color .22s var(--ease-pro), border-color .22s var(--ease-pro), box-shadow .25s var(--ease-pro), transform .22s var(--ease-pro); }
+        button svg, a svg { transition: transform .25s var(--ease-pro), color .22s var(--ease-pro); }
+        button:not(:disabled):active { transform: translateY(0) scale(.97) !important; }
         button:disabled { cursor: not-allowed; opacity: .6; }
+
+        /* ===== Animasi Hover Profesional (Tombol, Tab, Kartu, Tabel) ===== */
+        @media (hover: hover) {
+            /* Tombol utama dengan efek kilau (sheen) & angkat halus */
+            #btnSubmit, #btnLogin, #btnSimpanSet, #btnSimpanEdit {
+                position: relative;
+                overflow: hidden;
+            }
+            #btnSubmit::after, #btnLogin::after, #btnSimpanSet::after, #btnSimpanEdit::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(115deg, transparent 25%, rgba(255, 255, 255, 0.28) 50%, transparent 75%);
+                transform: translateX(-120%);
+                transition: transform .65s var(--ease-pro);
+                pointer-events: none;
+            }
+            #btnSubmit:not(:disabled):hover, #btnLogin:not(:disabled):hover, #btnSimpanSet:not(:disabled):hover, #btnSimpanEdit:not(:disabled):hover {
+                transform: translateY(-2px);
+                box-shadow: 0 14px 28px -8px rgba(99, 102, 241, 0.45);
+            }
+            #btnSubmit:not(:disabled):hover::after, #btnLogin:not(:disabled):hover::after, #btnSimpanSet:not(:disabled):hover::after, #btnSimpanEdit:not(:disabled):hover::after {
+                transform: translateX(120%);
+            }
+            #btnSubmit:not(:disabled):hover svg {
+                transform: translate(3px, -2px) scale(1.06);
+            }
+
+            /* Tombol sekunder, filter, & tombol mini */
+            .flt-btn:not(:disabled):hover, .mini-btn:not(:disabled):hover, #btnPrevPage:not(:disabled):hover, #btnNextPage:not(:disabled):hover {
+                transform: translateY(-1.5px);
+                box-shadow: 0 8px 18px -6px rgba(99, 102, 241, 0.2);
+                border-color: rgba(199, 210, 254, 0.95);
+            }
+            .mini-btn:not(:disabled):hover svg { transform: rotate(24deg) scale(1.08); }
+            #btnFltReset:not(:disabled):hover svg { transform: rotate(-35deg); }
+            .act-btns button:hover {
+                transform: translateY(-1.5px) scale(1.06);
+                box-shadow: 0 6px 14px -4px rgba(99, 102, 241, 0.22);
+            }
+            .m-wa:hover {
+                transform: translateY(-1px) scale(1.04);
+                background: rgba(187, 247, 208, 0.95);
+                box-shadow: 0 4px 10px -2px rgba(21, 128, 61, 0.2);
+            }
+
+            /* Tab Navigasi Sidebar & Sub-Tab */
+            .nav-item:not(.active):hover {
+                transform: translateX(4px);
+                color: var(--primary);
+                background: rgba(255, 255, 255, 0.85);
+                box-shadow: 0 6px 16px -6px rgba(99, 102, 241, 0.16);
+            }
+            .nav-item:not(.active):hover svg {
+                transform: scale(1.12);
+                color: var(--primary);
+            }
+            .nav-item.active:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 12px 24px -8px rgba(99, 102, 241, 0.78);
+            }
+            .sub-tab:hover {
+                transform: translateY(-1px);
+            }
+            .sub-tab:not(.text-primary):hover {
+                background: rgba(255, 255, 255, 0.72);
+                color: var(--primary);
+            }
+            #prevJTabs button:hover {
+                transform: translateY(-1px);
+                filter: brightness(1.08);
+            }
+
+            /* Kartu Metrik, Mode Logo, & Logo Unit */
+            .glass-card {
+                transition: transform .28s var(--ease-pro), box-shadow .28s var(--ease-pro), border-color .28s var(--ease-pro), background-color .28s var(--ease-pro);
+            }
+            .glass-card:hover {
+                transform: translateY(-3px);
+                background: rgba(255, 255, 255, 0.86);
+                border-color: rgba(199, 210, 254, 0.95);
+                box-shadow: 0 16px 32px -10px rgba(99, 102, 241, 0.18), inset 0 1px 0 rgba(255, 255, 255, 1);
+            }
+            .glass-card:hover > div:first-child {
+                transform: scale(1.06);
+                transition: transform .28s var(--ease-pro);
+            }
+            .mode-opt {
+                transition: transform .22s var(--ease-pro), border-color .22s var(--ease-pro), background-color .22s var(--ease-pro), box-shadow .22s var(--ease-pro);
+            }
+            .mode-opt:hover {
+                transform: translateY(-2px);
+                border-color: #A5B4FC;
+                background: rgba(255, 255, 255, 0.8);
+                box-shadow: 0 8px 18px -6px rgba(99, 102, 241, 0.16);
+            }
+            .logo-unit {
+                transition: transform .3s var(--ease-pro), filter .3s var(--ease-pro);
+            }
+            .logo-unit:hover {
+                transform: translateY(-3px) scale(1.07);
+                filter: drop-shadow(0 8px 14px rgba(99, 102, 241, 0.28));
+            }
+
+            /* Pilihan Radio di Formulir Publik */
+            #ppdbForm label.cursor-pointer {
+                padding: .4rem .75rem;
+                border-radius: .75rem;
+                border: 1px solid transparent;
+                transition: background-color .2s var(--ease-pro), border-color .2s var(--ease-pro), color .2s var(--ease-pro), transform .2s var(--ease-pro);
+            }
+            #ppdbForm label.cursor-pointer:hover {
+                background: rgba(238, 242, 255, 0.85);
+                border-color: rgba(199, 210, 254, 0.9);
+                color: var(--primary-dark);
+                transform: translateY(-1px);
+            }
+
+            /* Baris Tabel & Header Urut */
+            #tableBody tr {
+                transition: background-color .2s var(--ease-pro), box-shadow .2s var(--ease-pro);
+            }
+            #tableBody tr:hover {
+                background: rgba(238, 242, 255, 0.58) !important;
+                box-shadow: inset 3px 0 0 var(--primary);
+            }
+            .sortable {
+                transition: color .2s var(--ease-pro), background-color .2s var(--ease-pro);
+            }
+            .sortable:hover {
+                background: rgba(238, 242, 255, 0.75);
+            }
+            .sortable:hover .sort-ar {
+                color: var(--primary);
+                transform: translateY(-1px);
+                display: inline-block;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
 
         /* ===== Semi-Glassmorphism Surfaces ===== */
         .glass-panel {
@@ -134,7 +280,7 @@
         }
 
         /* ===== Navigasi ===== */
-        .nav-item { transition: background-color .15s, color .15s, box-shadow .15s; }
+        .nav-item { transition: background-color .22s var(--ease-pro), color .22s var(--ease-pro), box-shadow .25s var(--ease-pro), transform .22s var(--ease-pro); }
         .nav-item.active { background-color: var(--primary) !important; color: #fff !important; box-shadow: 0 8px 18px -8px rgba(99, 102, 241, .7); }
 
         /* ===== Tabel data ===== */
@@ -264,6 +410,7 @@
 <body>
 
 <div id="appRoot" class="blogger-wrapper text-slate-800">
+    <div id="appContent">
     
     <!-- 1. VIEW: FORMULIR PUBLIK -->
     <div id="viewForm" class="min-h-screen py-10 px-4 flex justify-center items-start">
@@ -390,8 +537,8 @@
     </div>
 
     <!-- 3. VIEW: DASHBOARD ADMIN -->
-    <div id="viewAdmin" class="hidden min-h-screen flex flex-col md:flex-row">
-        <div id="sideBar" class="w-full md:w-64 glass-sidebar md:min-h-screen border-r border-white/80 flex flex-row md:flex-col items-center md:items-stretch justify-between md:justify-start px-4 py-3 md:p-6 md:rounded-r-[32px] sticky top-0 md:relative z-20 md:z-10">
+    <div id="viewAdmin" class="hidden min-h-screen md:h-screen md:overflow-hidden flex flex-col md:flex-row">
+        <div id="sideBar" class="w-full md:w-64 glass-sidebar md:h-screen md:overflow-y-auto border-r border-white/80 flex flex-row md:flex-col items-center md:items-stretch justify-between md:justify-start px-4 py-3 md:p-6 md:rounded-r-[32px] sticky top-0 md:relative z-20 md:z-10">
             <div class="flex items-center space-x-3 md:mb-10">
                 <div class="bg-primary text-white p-2 rounded-xl shadow-md shadow-indigo-200"><i data-feather="grid"></i></div>
                 <h2 class="font-bold text-base md:text-lg text-slate-900 leading-tight">Admin<br class="hidden md:block"> PPDB</h2>
@@ -408,7 +555,8 @@
             </div>
         </div>
 
-        <div id="adminScroll" class="flex-1 p-4 pb-28 md:p-10 md:h-screen md:overflow-y-auto relative">
+        <div id="adminScroll" class="flex-1 min-w-0 p-4 pb-28 md:p-10 md:h-screen md:overflow-y-auto relative">
+          <div id="adminContent">
             <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-3 mb-4 md:mb-8">
                 <div>
                     <h2 class="text-xl md:text-3xl font-bold text-slate-900" id="dashTitle">Dashboard TK IT</h2>
@@ -460,7 +608,7 @@
                     </div>
                     <div id="filterInfo" class="text-xs text-slate-400 mt-2 min-h-[1rem]"></div>
                 </div>
-                <div id="tblWrap" class="hidden md:block px-4 pb-4 pt-0 mt-3 overflow-auto min-h-[400px] md:max-h-[68vh]">
+                <div id="tblWrap" data-lenis-prevent class="hidden md:block px-4 pb-4 pt-0 mt-3 overflow-auto min-h-[300px] md:max-h-[65vh]">
                     <table id="dataTable" class="w-full text-left text-sm">
                         <thead id="tableHead"></thead>
                         <tbody id="tableBody" class="text-slate-700"></tbody>
@@ -476,6 +624,7 @@
                     <button onclick="changePage(1)" id="btnNextPage" class="px-4 py-2 text-sm bg-white/75 backdrop-blur-sm border border-white/85 rounded-lg text-slate-600 hover:bg-white disabled:opacity-50">Selanjutnya</button>
                 </div>
             </div>
+          </div>
         </div>
     </div>
 
@@ -615,7 +764,7 @@
     </div>
 
     <!-- MODAL EDIT DATA TAMU -->
-    <div id="editModal" class="hidden fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-sm items-end md:items-center justify-center md:p-4 overflow-y-auto" onclick="if(event.target===this)closeEdit()">
+    <div id="editModal" data-lenis-prevent class="hidden fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-sm items-end md:items-center justify-center md:p-4 overflow-y-auto" onclick="if(event.target===this)closeEdit()">
       <div class="glass-panel rounded-t-3xl md:rounded-2xl shadow-2xl w-full max-w-lg md:my-auto max-h-[92vh] md:max-h-none overflow-y-auto md:overflow-visible">
         <div class="px-6 py-4 border-b border-slate-200/60 flex items-center justify-between">
           <h3 class="font-bold text-slate-900 flex items-center"><i data-feather="edit-2" class="w-5 h-5 mr-2 text-primary"></i> Edit Data Tamu</h3>
@@ -645,13 +794,13 @@
     </div>
 
     <!-- MODAL ALAT: TEMPAT SAMPAH / RIWAYAT / GABUNG -->
-    <div id="toolModal" class="hidden fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-sm items-end md:items-center justify-center md:p-4 overflow-y-auto" onclick="if(event.target===this)closeTool()">
+    <div id="toolModal" data-lenis-prevent class="hidden fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-sm items-end md:items-center justify-center md:p-4 overflow-y-auto" onclick="if(event.target===this)closeTool()">
       <div class="glass-panel rounded-t-3xl md:rounded-2xl shadow-2xl w-full max-w-4xl md:my-auto max-h-[92vh] md:max-h-none overflow-y-auto md:overflow-visible">
         <div class="px-6 py-4 border-b border-slate-200/60 flex items-center justify-between">
           <h3 id="toolTitle" class="font-bold text-slate-900 flex items-center"></h3>
           <button type="button" onclick="closeTool()" class="text-slate-400 hover:text-slate-600 text-2xl leading-none px-2" aria-label="Tutup">&times;</button>
         </div>
-        <div id="toolBody" class="p-6 max-h-[70vh] overflow-y-auto"></div>
+        <div id="toolBody" data-lenis-prevent class="p-6 max-h-[70vh] overflow-y-auto"></div>
       </div>
     </div>
 
@@ -667,6 +816,7 @@
           <button id="confirmOk" type="button" onclick="closeConfirm(true)" class="px-5 py-2.5 text-sm font-semibold bg-primary text-white rounded-xl hover:bg-primaryDark">OK</button>
         </div>
       </div>
+    </div>
     </div>
 </div>
 
@@ -708,21 +858,28 @@
 
         if (window.Lenis) {
             const rootEl = $('appRoot');
+            const rootContent = $('appContent');
             const adminEl = $('adminScroll');
+            const adminContent = $('adminContent');
             lenisMain = new Lenis({
                 wrapper: rootEl,
-                content: rootEl,
-                duration: 1.05,
+                content: rootContent,
+                duration: 0.95,
                 easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-                smoothWheel: true
+                smoothWheel: true,
+                prevent: node => {
+                    if (window.innerWidth >= 768 && adminEl && adminEl.contains(node)) return true;
+                    return !!(node && node.closest && node.closest('[data-lenis-prevent]'));
+                }
             });
-            if (adminEl) {
+            if (adminEl && adminContent) {
                 lenisAdmin = new Lenis({
                     wrapper: adminEl,
-                    content: adminEl,
-                    duration: 1.0,
+                    content: adminContent,
+                    duration: 0.95,
                     easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-                    smoothWheel: true
+                    smoothWheel: true,
+                    prevent: node => !!(node && node.closest && node.closest('[data-lenis-prevent]'))
                 });
             }
 
@@ -742,6 +899,12 @@
                 };
                 requestAnimationFrame(raf);
             }
+
+            if (window.ResizeObserver) {
+                const ro = new ResizeObserver(() => refreshLenisLayout());
+                if (rootContent) ro.observe(rootContent);
+                if (adminContent) ro.observe(adminContent);
+            }
         }
 
         // Aktifkan drag-to-scroll (tahan klik & geser kanan-kiri / atas-bawah)
@@ -750,6 +913,11 @@
 
         // Animasi judul muncul per kata pada halaman awal
         animateTitleWords(document.querySelector('#viewForm h1'), $('appRoot'));
+    }
+
+    function refreshLenisLayout() {
+        if (lenisMain) lenisMain.resize();
+        if (lenisAdmin) lenisAdmin.resize();
     }
 
     function setLenisPaused(paused) {
@@ -874,8 +1042,10 @@
             loadTahunAjaran();
             if (!autoTimer) autoTimer = setInterval(autoRefresh, 60000);
             restoreTableUi();
+            refreshLenisLayout();
             if (window.ScrollTrigger) ScrollTrigger.refresh();
         }
+        refreshLenisLayout();
     }
 
     function toggleUnitOpts() {
@@ -1196,6 +1366,7 @@
     function toggleFilter() {
         const open = $('fltExtra').classList.toggle('open');
         const b = $('btnFltToggle'); b.classList.toggle('on', open); b.setAttribute('aria-expanded', open);
+        refreshLenisLayout();
     }
 
     let renderTimer = null;
@@ -1749,6 +1920,7 @@
         $('viewSettings').classList.add('hidden');
         $('viewAdmin').classList.remove('hidden');
         animateTitleWords($('dashTitle'), $('adminScroll'));
+        refreshLenisLayout();
         if (window.ScrollTrigger) ScrollTrigger.refresh();
     }
 
@@ -2199,6 +2371,7 @@
         $('btnNextPage').disabled = currentPage === totalPages;
         
         feather.replace();
+        refreshLenisLayout();
         if (window.ScrollTrigger) ScrollTrigger.refresh();
     }
 
